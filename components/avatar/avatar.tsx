@@ -6,18 +6,18 @@ type AvatarProps = {
   children?: React.ReactNode
 }
 
-export default function Avatar({ className, children }: AvatarProps) {
+export default function Avatar({ className }: AvatarProps) {
   return (
     <Section
       hasPadding={false}
-      className={`Avatar flex items-center justify-center relative ${className ?? ''}`}
+      className={`Avatar flex items-center justify-center relative overflow-hidden h-[5.5cm] ${className ?? ''}`}
     >
       <Image
         src="/images/antoine.jpg"
         alt="Antoine"
         height={500}
         width={500}
-        className="absolute opacity-5"
+        className="absolute"
       />
     </Section>
   )

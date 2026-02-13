@@ -22,7 +22,7 @@ export default function Infos({}: InfosProps) {
   } = data.infos
 
   return (
-    <Section className="Infos">
+    <Section className="Infos self-start">
       <SectionTitle highlighted>
         {firstname} {lastname}
       </SectionTitle>

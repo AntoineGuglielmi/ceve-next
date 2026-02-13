@@ -8,7 +8,7 @@ export const data: TypeData = {
     address2: '',
     postalCode: '26000',
     city: 'Valence',
-    tel: '06.84-71.71 90',
+    tel: '06 84 71 71 90',
     email: 'contact.antoine.guglielmi@gmail.com',
     webSite: 'https://antoine-g.com/',
     photo: true,
@@ -23,11 +23,11 @@ export const data: TypeData = {
     title: 'Follow me',
     list: [
       {
-        title: 'LinkedIn',
+        icon: 'Linkedin',
         link: 'https://www.linkedin.com/in/antoineguglielmi/',
       },
       {
-        title: 'Github',
+        icon: 'Github',
         link: 'https://github.com/AntoineGuglielmi',
       },
     ],

@@ -10,5 +10,10 @@ export function DynamicIcon({ name, ...props }: DynamicIconProps) {
 
   if (!Icon) return null
 
-  return <Icon {...props} />
+  return (
+    <Icon
+      strokeWidth={1}
+      {...props}
+    />
+  )
 }

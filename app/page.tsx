@@ -1,12 +1,20 @@
 import Avatar from '@/components/avatar/avatar'
+import Follows from '@/components/follows/follows'
 import Infos from '@/components/infos/infos'
-import Page from '@/components/page/page'
+import Column from '@/components/shared/page/column'
+import Page from '@/components/shared/page/page'
 
 export default function Home() {
   return (
     <Page>
-      <Avatar />
-      <Infos />
+      <Column>
+        <Avatar />
+        <Follows />
+      </Column>
+
+      <Column>
+        <Infos />
+      </Column>
     </Page>
   )
 }

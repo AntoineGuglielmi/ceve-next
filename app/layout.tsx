@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito.variable} antialiased flex items-center justify-center bg-slate-50 font-nunito text-[11px]`}
+        className={`${nunito.variable} antialiased flex items-center justify-center bg-slate-50 font-nunito text-[11px] text-cv-anthracite`}
       >
         {children}
       </body>
