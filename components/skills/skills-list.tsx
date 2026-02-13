@@ -1,4 +1,4 @@
-import { TypeSkills, TypeSkillType } from '@/types/data/TypeSkills'
+import { TypeSkillType } from '@/types/data/TypeSkills'
 import SkillItem from './skill-item'
 
 type SkillsListProps = {
