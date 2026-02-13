@@ -2,4 +2,10 @@
 
 @theme inline {
   --font-nunito: var(--font-nunito);
+
+  --color-cv-orange: oklch(77.73% 0.0889 62);
+  --color-cv-blanc: oklch(97.91% 0 0);
+  --color-cv-pill: oklch(51.73% 0 0);
+  --color-cv-anthracite: oklch(39.42% 0 0);
+  --color-cv-gris-clair: oklch(89.45% 0 0);
 }
