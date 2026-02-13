@@ -11,9 +11,7 @@ type HardSkillsProps = {
 export default function HardSkills({ className, children }: HardSkillsProps) {
   const { title, list } = data.skills.hard
   return (
-    <Section
-      className={`HardSkills bg-cv-anthracite text-cv-blanc ${className ?? ''}`}
-    >
+    <Section className={`HardSkills ${className ?? ''}`}>
       <SectionTitle highlighted>{title}</SectionTitle>
       <SkillsList list={list} />
     </Section>

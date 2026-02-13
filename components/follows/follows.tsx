@@ -12,9 +12,7 @@ export default function Follows({ className, children }: FollowsProps) {
   const { title, list } = data.follows
 
   return (
-    <Section
-      className={`Follows bg-cv-anthracite text-cv-blanc ${className ?? ''}`}
-    >
+    <Section className={`Follows ${className ?? ''}`}>
       <SectionTitle highlighted>{title}</SectionTitle>
 
       <FollowList list={list} />

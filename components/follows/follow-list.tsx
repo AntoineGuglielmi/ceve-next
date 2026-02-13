@@ -7,16 +7,12 @@ type FollowListProps = {
   list: TypeFollows['list']
 }
 
-export default function FollowList({
-  className,
-  children,
-  list,
-}: FollowListProps) {
+export default function FollowList({ className, list }: FollowListProps) {
   return (
     <ul className={`FollowList flex flex-col gap-2 ${className ?? ''}`}>
       {list.map((item) => {
         return (
-          <li key={item.title}>
+          <li key={item.link}>
             <FollowItem item={item} />
           </li>
         )
