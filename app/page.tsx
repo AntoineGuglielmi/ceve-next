@@ -1,12 +1,12 @@
-import Column from '@/components/page/column'
+import Avatar from '@/components/avatar/avatar'
+import Infos from '@/components/infos/infos'
 import Page from '@/components/page/page'
 
 export default function Home() {
   return (
     <Page>
-      <Column>Gauche</Column>
-
-      <Column>Droite</Column>
+      <Avatar />
+      <Infos />
     </Page>
   )
 }
