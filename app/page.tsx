@@ -1,4 +1,5 @@
 import Avatar from '@/components/avatar/avatar'
+import Experiences from '@/components/experiences/experiences'
 import Follows from '@/components/follows/follows'
 import HardSkills from '@/components/hard-skills/hard-skills'
 import Infos from '@/components/infos/infos'
@@ -26,6 +27,7 @@ export default function Home() {
       <Column className="p-4 gap-6">
         <Infos />
         <Intro />
+        <Experiences />
       </Column>
     </Page>
   )

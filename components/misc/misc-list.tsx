@@ -9,7 +9,7 @@ type MiscListProps = {
 
 export default function MiscList({ className, list }: MiscListProps) {
   return (
-    <ul className={`MiscList flex flex-wrap gap-1 ${className ?? ''}`}>
+    <ul className={`MiscList flex flex-wrap gap-2 ${className ?? ''}`}>
       {list.map((misc) => {
         return (
           <li key={misc}>

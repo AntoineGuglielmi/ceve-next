@@ -100,7 +100,9 @@ export const data: TypeData = {
         jobs: [
           {
             title: 'SIRH',
-            text: 'Full-stack developer (PHP / JavaScript, React). Strong front-end focus, with recognized contributions to UI modernization, such as the adoption of BEM methodology, design system structuring, and UX improvements.',
+            text:
+              'Full-stack developer (PHP / JavaScript, React). Strong front-end focus, with recognized contributions to UI modernization ' +
+              '(BEM methodology, design system structuring, UX improvements,etc.)',
           },
         ],
       },

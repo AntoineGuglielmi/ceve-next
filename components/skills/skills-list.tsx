@@ -10,7 +10,7 @@ type SkillsListProps = {
 export default function SkillsList({ className, list }: SkillsListProps) {
   return (
     <div className={`SkillsList ${className ?? ''}`}>
-      <ul className="flex flex-wrap gap-1">
+      <ul className="flex flex-wrap gap-2">
         {list.map((item) => {
           return (
             <li key={item}>

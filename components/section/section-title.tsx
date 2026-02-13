@@ -33,7 +33,7 @@ export default function SectionTitle({
     <h2
       className={`
         SectionTitle text-[15px] uppercase font-black relative
-        after:block after:h-px after:w-full after:mt-2 after:mb-3 ${decorationColorClass.after} 
+        after:block after:h-px after:w-full after:mb-2 ${decorationColorClass.after} 
         before:block before:h-0.75 before:w-6 before:absolute before:top-full before:-translate-y-1/2 ${decorationColorClass.before}
         ${highlighted && 'text-cv-orange'} ${className ?? ''}
     `}
