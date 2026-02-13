@@ -16,7 +16,9 @@ export const data: TypeData = {
 
   intro: {
     title: 'Développeur Frontend',
-    text: 'Passionate and curious front-end developer, I have built my career around creating intuitive and high-performance digital experiences. My journey is driven by a constant desire to learn, innovate, and turn ideas into tangible solutions.',
+    text:
+      'Passionate and curious front-end developer, I have built my career around creating intuitive and high-performance digital experiences.' +
+      'My journey is driven by a constant desire to learn, innovate, and turn ideas into tangible solutions.',
   },
 
   follows: {

@@ -2,6 +2,7 @@ import Avatar from '@/components/avatar/avatar'
 import Follows from '@/components/follows/follows'
 import HardSkills from '@/components/hard-skills/hard-skills'
 import Infos from '@/components/infos/infos'
+import Intro from '@/components/intro/intro'
 import Misc from '@/components/misc/misc'
 import More from '@/components/more/more'
 import Column from '@/components/shared/page/column'
@@ -24,6 +25,7 @@ export default function Home() {
 
       <Column className="p-4 gap-6">
         <Infos />
+        <Intro />
       </Column>
     </Page>
   )
