@@ -7,7 +7,7 @@ type MiscListProps = {
   list: TypeMisc['list']
 }
 
-export default function MiscList({ className, children, list }: MiscListProps) {
+export default function MiscList({ className, list }: MiscListProps) {
   return (
     <ul className={`MiscList flex flex-wrap gap-1 ${className ?? ''}`}>
       {list.map((misc) => {

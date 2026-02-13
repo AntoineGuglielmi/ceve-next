@@ -8,7 +8,7 @@ type HardSkillsProps = {
   children?: React.ReactNode
 }
 
-export default function HardSkills({ className, children }: HardSkillsProps) {
+export default function HardSkills({ className }: HardSkillsProps) {
   const { title, list } = data.skills.hard
   return (
     <Section className={`HardSkills ${className ?? ''}`}>

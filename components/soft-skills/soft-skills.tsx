@@ -8,7 +8,7 @@ type SoftSkillsProps = {
   children?: React.ReactNode
 }
 
-export default function SoftSkills({ className, children }: SoftSkillsProps) {
+export default function SoftSkills({ className }: SoftSkillsProps) {
   const { title, list } = data.skills.soft
   return (
     <Section className={`SoftSkills ${className ?? ''}`}>

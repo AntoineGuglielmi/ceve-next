@@ -8,7 +8,7 @@ type MiscProps = {
   children?: React.ReactNode
 }
 
-export default function Misc({ className, children }: MiscProps) {
+export default function Misc({ className }: MiscProps) {
   const { list, title } = data.misc
 
   return (
