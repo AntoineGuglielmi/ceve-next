@@ -80,9 +80,9 @@ export const data: TypeData = {
     title: 'Miscellaneus',
     list: [
       'Cooking',
-      'Reading (Shirley Jackson, H.P. Lovecraft, Arthur Conan Doyle, Mary Shelley, ...)',
       'Badminton',
       'Web technology watch',
+      'Reading (Shirley Jackson, H.P. Lovecraft, Arthur Conan Doyle, Mary Shelley, ...)',
     ],
   },
 

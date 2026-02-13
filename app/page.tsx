@@ -11,16 +11,18 @@ import SoftSkills from '@/components/soft-skills/soft-skills'
 export default function Home() {
   return (
     <Page>
-      <Column className="bg-cv-anthracite text-cv-blanc">
+      <Column className="bg-cv-anthracite text-cv-blanc ">
         <Avatar />
-        <Follows />
-        <HardSkills />
-        <SoftSkills />
-        <Misc />
-        <More />
+        <Column className="p-4 gap-6">
+          <Follows />
+          <HardSkills />
+          <SoftSkills />
+          <Misc />
+          <More />
+        </Column>
       </Column>
 
-      <Column>
+      <Column className="p-4 gap-6">
         <Infos />
       </Column>
     </Page>

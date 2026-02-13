@@ -7,7 +7,7 @@ type SectionProps = {
 export default function Section({
   className,
   children,
-  hasPadding = true,
+  hasPadding = false,
 }: SectionProps) {
   return (
     <section className={`${className ?? 'Section'} ${hasPadding && 'p-4'}`}>

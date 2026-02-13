@@ -11,6 +11,7 @@ type MoreProps = {
 
 export default function More({ className, children }: MoreProps) {
   const { Canvas } = useQRCode()
+
   return (
     <Section className={`More ${className ?? ''}`}>
       <SectionTitle highlighted>More ?</SectionTitle>
@@ -21,10 +22,10 @@ export default function More({ className, children }: MoreProps) {
           options={{
             errorCorrectionLevel: 'M',
             margin: 1,
-            scale: 1,
-            width: 20,
+            scale: 2,
             color: {
-              light: '#FFBF60FF',
+              dark: '#e0aa7bff',
+              light: '#e0aa7b00',
             },
           }}
         />
