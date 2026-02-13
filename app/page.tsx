@@ -2,9 +2,10 @@ import Avatar from '@/components/avatar/avatar'
 import Follows from '@/components/follows/follows'
 import HardSkills from '@/components/hard-skills/hard-skills'
 import Infos from '@/components/infos/infos'
+import Misc from '@/components/misc/misc'
 import Column from '@/components/shared/page/column'
 import Page from '@/components/shared/page/page'
-import SofSkills from '@/components/sof-skills/sof-skills'
+import SoftSkills from '@/components/soft-skills/soft-skills'
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
         <Avatar />
         <Follows />
         <HardSkills />
-        <SofSkills />
+        <SoftSkills />
+        <Misc />
       </Column>
 
       <Column>

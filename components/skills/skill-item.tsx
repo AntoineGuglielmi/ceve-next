@@ -1,4 +1,4 @@
-import Pill from '../pill/pill'
+import Pill from '../shared/pill/pill'
 
 type SkillItemProps = {
   className?: string
