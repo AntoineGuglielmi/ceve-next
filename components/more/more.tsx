@@ -9,7 +9,7 @@ type MoreProps = {
   children?: React.ReactNode
 }
 
-export default function More({ className, children }: MoreProps) {
+export default function More({ className }: MoreProps) {
   const { Canvas } = useQRCode()
 
   return (
@@ -18,7 +18,7 @@ export default function More({ className, children }: MoreProps) {
       <div className="More__content flex gap-4">
         <p>You can find more informations by scanning the followindg QRCode</p>
         <Canvas
-          text={'https://github.com/bunlong/next-qrcode'}
+          text={'https://antoine-g.com'}
           options={{
             errorCorrectionLevel: 'M',
             margin: 1,
