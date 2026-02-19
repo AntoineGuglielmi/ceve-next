@@ -1,7 +1,8 @@
 import { data } from '@/data/antoine'
 import Section from '../section/section'
 import SectionTitle from '../section/section-title'
-import ExperiencesList from './experiences-list'
+import List from '@/shared/components/lists/list'
+import ExperienceItem from './experience-item'
 
 type ExperiencesProps = {
   className?: string
@@ -14,7 +15,11 @@ export default function Experiences({ className }: ExperiencesProps) {
   return (
     <Section className={`Experiences ${className ?? ''}`}>
       <SectionTitle>{title}</SectionTitle>
-      <ExperiencesList list={list} />
+      <List
+        className="flex flex-col gap-4"
+        items={list}
+        renderItem={ExperienceItem}
+      />
     </Section>
   )
 }

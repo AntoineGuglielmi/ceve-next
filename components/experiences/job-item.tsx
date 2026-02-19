@@ -3,11 +3,11 @@ import { TypeJob } from '@/types/data/TypeExperiences'
 type JobItemProps = {
   className?: string
   children?: React.ReactNode
-  item: TypeJob
+  title: TypeJob['title']
+  text: TypeJob['text']
 }
 
-export default function JobItem({ className, item }: JobItemProps) {
-  const { text, title } = item
+export default function JobItem({ className, text, title }: JobItemProps) {
   return (
     <div className={`JobItem ${className ?? ''}`}>
       <p className="font-bold">{title}</p>
