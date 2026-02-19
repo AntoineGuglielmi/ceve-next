@@ -1,7 +1,8 @@
 import { data } from '@/data/antoine'
 import Section from '../section/section'
 import SectionTitle from '../section/section-title'
-import MiscList from './misc-list'
+import List from '@/shared/components/lists/list'
+import Pill from '../shared/pill/pill'
 
 type MiscProps = {
   className?: string
@@ -14,7 +15,11 @@ export default function Misc({ className }: MiscProps) {
   return (
     <Section className={`Misc ${className ?? ''}`}>
       <SectionTitle highlighted>{title}</SectionTitle>
-      <MiscList list={list} />
+      <List
+        className="flex flex-wrap gap-2"
+        items={list.map((item) => ({ text: item }))}
+        renderItem={Pill}
+      />
     </Section>
   )
 }

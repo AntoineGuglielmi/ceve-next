@@ -1,7 +1,8 @@
 import { data } from '@/data/antoine'
 import Section from '../section/section'
 import SectionTitle from '../section/section-title'
-import SkillsList from '../skills/skills-list'
+import Pill from '../shared/pill/pill'
+import List from '@/shared/components/lists/list'
 
 type HardSkillsProps = {
   className?: string
@@ -13,7 +14,11 @@ export default function HardSkills({ className }: HardSkillsProps) {
   return (
     <Section className={`HardSkills ${className ?? ''}`}>
       <SectionTitle highlighted>{title}</SectionTitle>
-      <SkillsList list={list} />
+      <List
+        className="flex flex-wrap gap-2"
+        items={list.map((skill) => ({ text: skill }))}
+        renderItem={Pill}
+      />
     </Section>
   )
 }
