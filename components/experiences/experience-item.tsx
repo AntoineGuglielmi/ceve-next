@@ -18,7 +18,7 @@ export default function ExperienceItem({
     >
       <div className="ExperienceItem__header col-span-2 grid grid-cols-subgrid">
         <div className="ExperienceItem__infos">
-          <p className="font-bold pr-2 uppercase">{title}</p>
+          <p className="font-bold pr-2 uppercase text-[13px]">{title}</p>
           <p className="font-bold">{organism}</p>
           <p className="">{geo}</p>
           <p>

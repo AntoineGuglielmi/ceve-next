@@ -12,7 +12,7 @@ export default function ExperiencesList({
   list,
 }: ExperiencesListProps) {
   return (
-    <ul className={`ExperiencesList flex flex-col gap-4 ${className ?? ''}`}>
+    <ul className={`ExperiencesList flex flex-col gap-6 ${className ?? ''}`}>
       {list.map((item) => {
         return (
           <li key={item.start}>

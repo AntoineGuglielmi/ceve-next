@@ -43,10 +43,10 @@ export const data: TypeData = {
         'React',
         'Nuxt.js',
         'Vue.js',
+        'PHP',
         'Tailwind',
         'Typescript',
         'Javascript',
-        'PHP',
         'Linux',
         'Git',
         'Github',
@@ -55,9 +55,9 @@ export const data: TypeData = {
         'Azure',
         'Jira',
         'GraphQL',
-        'APIs creation and consumption',
         'Apollo',
         'MySql',
+        'APIs creation and consumption',
         'English (B1)',
         'French (mother language)',
       ],
@@ -100,9 +100,7 @@ export const data: TypeData = {
         jobs: [
           {
             title: 'SIRH',
-            text:
-              'Full-stack developer (PHP / JavaScript, React). Strong front-end focus, with recognized contributions to UI modernization ' +
-              '(BEM methodology, design system structuring, UX improvements,etc.)',
+            text: 'Full-stack developer, strong front-end focus, with recognized contributions to UI modernization',
           },
         ],
       },
@@ -125,13 +123,13 @@ export const data: TypeData = {
           },
           {
             title: 'Bjorg to be alive',
-            text: 'Development, as lead front developer, of a complete digital platform to support an activation campaign. Developed in Nuxt.js, integration of Matomo Analytics. https://urlz.fr/sODk',
+            text: 'Development, as lead front developer, of a complete digital platform to support an activation campaign. Nuxt.js, integration of Matomo Analytics. https://urlz.fr/sODk',
           },
           {
             title: 'Interflora',
             text:
               "Multi-country migration (italy, spain, portugal) after interflora.fr multi-device pilot site's redesign, " +
-              'partially as lead developer. Interflora was voted best online e-commerce site! https://urlz.fr/mKfw',
+              'partially as lead developer. https://urlz.fr/mKfw',
           },
         ],
       },
