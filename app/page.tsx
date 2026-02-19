@@ -1,4 +1,5 @@
 import Avatar from '@/components/avatar/avatar'
+import Diplomas from '@/components/diplomas/diplomas'
 import Experiences from '@/components/experiences/experiences'
 import Follows from '@/components/follows/follows'
 import HardSkills from '@/components/hard-skills/hard-skills'
@@ -28,6 +29,7 @@ export default function Home() {
         <Infos />
         <Intro />
         <Experiences />
+        <Diplomas />
       </Column>
     </Page>
   )

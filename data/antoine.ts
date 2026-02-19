@@ -84,6 +84,7 @@ export const data: TypeData = {
       'Cooking',
       'Badminton',
       'Web technology watch',
+      'Proud father of a little boy almost 5 years old',
       'Reading (Shirley Jackson, H.P. Lovecraft, Arthur Conan Doyle, Mary Shelley, ...)',
     ],
   },

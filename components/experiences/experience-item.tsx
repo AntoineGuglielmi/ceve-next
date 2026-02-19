@@ -1,5 +1,7 @@
 import { TypeExperienceItem } from '@/types/data/TypeExperiences'
 import JobsList from './jobs-list'
+import Title from '../shared/item/title'
+import Date from '../shared/item/date'
 
 type ExperienceItemProps = {
   className?: string
@@ -18,15 +20,16 @@ export default function ExperienceItem({
     >
       <div className="ExperienceItem__header col-span-2 grid grid-cols-subgrid">
         <div className="ExperienceItem__infos">
-          <p className="font-bold pr-2 uppercase text-[13px]">{title}</p>
+          <Title>{title}</Title>
           <p className="font-bold">{organism}</p>
           <p className="">{geo}</p>
-          <p>
-            {start} - {end}
-          </p>
+          <Date
+            start={start}
+            end={end}
+          />
         </div>
 
-        <div className="ExperienceItem__jobs">
+        <div className="ExperienceItem__jobs border-l border-l-cv-orange pl-2">
           <JobsList list={jobs} />
         </div>
       </div>
