@@ -7,14 +7,25 @@ import Organism from '../shared/item/organism'
 type DiplomaItemProps = {
   className?: string
   children?: React.ReactNode
-  item: TypeDiplomaItem
+  title: TypeDiplomaItem['title']
+  organism: TypeDiplomaItem['organism']
+  start: TypeDiplomaItem['start']
+  end: TypeDiplomaItem['end']
+  geo: TypeDiplomaItem['geo']
+  desc: TypeDiplomaItem['desc']
 }
 
-export default function DiplomaItem({ className, item }: DiplomaItemProps) {
-  const { title, end, geo, organism, start } = item
+export default function DiplomaItem({
+  className,
+  end,
+  geo,
+  organism,
+  start,
+  title,
+}: DiplomaItemProps) {
   return (
-    <div className={`DiplomaItem grid-phi ${className ?? ''}`}>
-      <div className="DiplomaItem__left">
+    <div className={`DiplomaItem grid grid-cols-phi ${className ?? ''}`}>
+      <div className="DiplomaItem__left flex flex-col">
         <Title>{title}</Title>
         <Date
           end={end}
@@ -22,7 +33,7 @@ export default function DiplomaItem({ className, item }: DiplomaItemProps) {
         />
       </div>
 
-      <div className="DiplomaItem__right">
+      <div className="DiplomaItem__right flex flex-col">
         <Organism>{organism}</Organism>
         <Geo>{geo}</Geo>
       </div>

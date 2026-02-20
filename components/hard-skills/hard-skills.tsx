@@ -18,6 +18,7 @@ export default function HardSkills({ className }: HardSkillsProps) {
         className="flex flex-wrap gap-2"
         items={list.map((skill) => ({ text: skill }))}
         renderItem={Pill}
+        getKey={(item) => item.text}
       />
     </Section>
   )

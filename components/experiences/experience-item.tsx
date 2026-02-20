@@ -26,9 +26,7 @@ export default function ExperienceItem({
   jobs,
 }: ExperienceItemProps) {
   return (
-    <div
-      className={`ExperienceItem grid grid-cols-[38.2%_61.8%] ${className ?? ''}`}
-    >
+    <div className={`ExperienceItem grid grid-cols-phi ${className ?? ''}`}>
       <div className="ExperienceItem__header col-span-2 grid grid-cols-subgrid">
         <div className="ExperienceItem__infos">
           <Title>{title}</Title>
@@ -45,6 +43,7 @@ export default function ExperienceItem({
             className="flex flex-col gap-2"
             items={jobs}
             renderItem={JobItem}
+            getKey={(item) => item.title}
           />
         </div>
       </div>

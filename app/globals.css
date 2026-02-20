@@ -11,6 +11,6 @@
   --color-cv-gris-clair: oklch(89.45% 0 0);
 }
 
-@utility .grid-phi {
-  @apply grid grid-cols-[38.2%_61.8%];
+@utility grid-cols-phi {
+  @apply grid-cols-[38.2%_61.8%];
 }

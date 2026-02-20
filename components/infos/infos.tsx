@@ -26,7 +26,7 @@ export default function Infos({}: InfosProps) {
       <SectionTitle highlighted>
         {firstname} {lastname}
       </SectionTitle>
-      <div className="grid grid-cols-[38.2%_61.8%]">
+      <div className="grid grid-cols-phi">
         <div className="col">
           <InfoItem>{address1}</InfoItem>
           {address2 && <InfoItem>{address2}</InfoItem>}

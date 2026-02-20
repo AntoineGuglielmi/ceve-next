@@ -19,6 +19,7 @@ export default function Misc({ className }: MiscProps) {
         className="flex flex-wrap gap-2"
         items={list.map((item) => ({ text: item }))}
         renderItem={Pill}
+        getKey={(item) => item.text}
       />
     </Section>
   )

@@ -19,6 +19,7 @@ export default function Experiences({ className }: ExperiencesProps) {
         className="flex flex-col gap-4"
         items={list}
         renderItem={ExperienceItem}
+        getKey={(item) => item.title}
       />
     </Section>
   )
