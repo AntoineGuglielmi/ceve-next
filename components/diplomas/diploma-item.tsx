@@ -24,7 +24,7 @@ export default function DiplomaItem({
   title,
 }: DiplomaItemProps) {
   return (
-    <div className={`DiplomaItem grid grid-cols-phi ${className ?? ''}`}>
+    <div className={`DiplomaItem grid grid-cols-phi gap-4 ${className ?? ''}`}>
       <div className="DiplomaItem__left flex flex-col">
         <Title>{title}</Title>
         <Date

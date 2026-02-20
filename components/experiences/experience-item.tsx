@@ -3,6 +3,8 @@ import Title from '../shared/item/title'
 import Date from '../shared/item/date'
 import List from '@/shared/components/lists/list'
 import JobItem from './job-item'
+import Border from '../shared/item/border'
+import Organism from '../shared/item/organism'
 
 type ExperienceItemProps = {
   className?: string
@@ -26,11 +28,13 @@ export default function ExperienceItem({
   jobs,
 }: ExperienceItemProps) {
   return (
-    <div className={`ExperienceItem grid grid-cols-phi ${className ?? ''}`}>
+    <div
+      className={`ExperienceItem grid grid-cols-phi gap-4 ${className ?? ''}`}
+    >
       <div className="ExperienceItem__header col-span-2 grid grid-cols-subgrid">
         <div className="ExperienceItem__infos">
           <Title>{title}</Title>
-          <p className="font-bold">{organism}</p>
+          <Organism>{organism}</Organism>
           <p className="">{geo}</p>
           <Date
             start={start}
@@ -38,7 +42,8 @@ export default function ExperienceItem({
           />
         </div>
 
-        <div className="ExperienceItem__jobs border-l border-l-cv-orange pl-2">
+        <div className="ExperienceItem__jobs relative">
+          <Border />
           <List
             className="flex flex-col gap-2"
             items={jobs}

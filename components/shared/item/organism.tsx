@@ -5,6 +5,8 @@ type OrganismProps = {
 
 export default function Organism({ className, children }: OrganismProps) {
   return (
-    <div className={`Organism font-bold ${className ?? ''}`}>{children}</div>
+    <div className={`Organism font-bold uppercase ${className ?? ''}`}>
+      {children}
+    </div>
   )
 }
