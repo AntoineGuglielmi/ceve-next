@@ -17,6 +17,17 @@ export interface Info {
   website?: string;
 };
 
+export interface Intro {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  title?: string;
+  text?: string;
+};
+
 export interface Media {
   id: number;
   name: string;
