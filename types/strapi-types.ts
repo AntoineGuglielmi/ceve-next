@@ -44,6 +44,17 @@ export interface Intro {
   text?: string;
 };
 
+export interface SoftSkillsSection {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  title?: string;
+  list?: AtomsHardSkill[] | null;
+};
+
 export interface Media {
   id: number;
   name: string;
