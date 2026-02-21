@@ -1,4 +1,20 @@
 
+export interface AtomsHardSkill {
+  id?: number;
+  text?: string;
+};
+
+export interface HardSkillsSection {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  title?: string;
+  list?: AtomsHardSkill[] | null;
+};
+
 export interface Info {
   id?: number;
   documentId?: string;
