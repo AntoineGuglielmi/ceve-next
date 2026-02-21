@@ -1,14 +1,15 @@
-import { data } from '@/data/antoine'
 import Section from '../section/section'
 import SectionTitle from '../section/section-title'
 import InfoItem from './info-item'
+import { ServiceGetInfo } from '@/services/Info'
 
 type InfosProps = {
   className?: string
   children?: React.ReactNode
 }
 
-export default function Infos({}: InfosProps) {
+export default async function Infos({}: InfosProps) {
+  const infos = await ServiceGetInfo()
   const {
     firstname,
     lastname,
@@ -16,10 +17,10 @@ export default function Infos({}: InfosProps) {
     address2,
     city,
     postalCode,
-    tel,
+    phone,
     email,
-    webSite,
-  } = data.infos
+    website,
+  } = infos
 
   return (
     <Section className="Infos self-start">
@@ -36,9 +37,9 @@ export default function Infos({}: InfosProps) {
         </div>
 
         <div className="col">
-          <InfoItem icon="Phone">{tel}</InfoItem>
+          <InfoItem icon="Phone">{phone}</InfoItem>
           <InfoItem icon="Mail">{email}</InfoItem>
-          <InfoItem icon="AtSign">{webSite}</InfoItem>
+          <InfoItem icon="AtSign">{website}</InfoItem>
         </div>
       </div>
     </Section>
