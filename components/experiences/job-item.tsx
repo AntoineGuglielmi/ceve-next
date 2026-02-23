@@ -1,10 +1,10 @@
-import { TypeJob } from '@/types/data/TypeExperiences'
+import { MoleculesJobItem } from '@/types/strapi-types'
 
 type JobItemProps = {
   className?: string
   children?: React.ReactNode
-  title: TypeJob['title']
-  text: TypeJob['text']
+  title?: MoleculesJobItem['title']
+  text?: MoleculesJobItem['text']
 }
 
 export default function JobItem({ className, text, title }: JobItemProps) {

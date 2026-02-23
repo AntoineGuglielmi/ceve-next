@@ -15,6 +15,33 @@ export interface AtomsMiscItem {
   text?: string;
 };
 
+export interface MoleculesExperienceItem {
+  id?: number;
+  title?: string;
+  organism?: string;
+  geo?: string;
+  start?: string;
+  end?: string;
+  jobs?: MoleculesJobItem[] | null;
+};
+
+export interface MoleculesJobItem {
+  id?: number;
+  title?: string;
+  text?: string;
+};
+
+export interface ExperiencesSection {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  title?: string;
+  list?: MoleculesExperienceItem[] | null;
+};
+
 export interface FollowSection {
   id?: number;
   documentId?: string;
