@@ -77,6 +77,18 @@ export interface MiscSection {
   list?: AtomsMiscItem[] | null;
 };
 
+export interface PlusSection {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  title?: string;
+  text?: string;
+  link?: string;
+};
+
 export interface SoftSkillsSection {
   id?: number;
   documentId?: string;

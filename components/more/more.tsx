@@ -1,34 +1,22 @@
-'use client'
-
-import { useQRCode } from 'next-qrcode'
+import { ServiceGetPlusSection } from '@/services/plus'
 import Section from '../section/section'
 import SectionTitle from '../section/section-title'
+import QrCode from './qr-code'
 
 type MoreProps = {
   className?: string
   children?: React.ReactNode
 }
 
-export default function More({ className }: MoreProps) {
-  const { Canvas } = useQRCode()
-
+export default async function More({ className }: MoreProps) {
+  const plusSection = await ServiceGetPlusSection()
+  const { title, text, link } = plusSection
   return (
     <Section className={`More ${className ?? ''}`}>
-      <SectionTitle highlighted>More ?</SectionTitle>
+      <SectionTitle highlighted>{title}</SectionTitle>
       <div className="More__content flex gap-4">
-        <p>You can find more informations by scanning the followindg QRCode</p>
-        <Canvas
-          text={'https://antoine-g.com'}
-          options={{
-            errorCorrectionLevel: 'M',
-            margin: 1,
-            scale: 2,
-            color: {
-              dark: '#e0aa7bff',
-              light: '#e0aa7b00',
-            },
-          }}
-        />
+        <p>{text}</p>
+        <QrCode link={link!} />
       </div>
     </Section>
   )
