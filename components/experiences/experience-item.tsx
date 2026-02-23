@@ -9,7 +9,6 @@ import Organism from '../shared/item/organism'
 type ExperienceItemProps = {
   className?: string
   children?: React.ReactNode
-  // item: TypeExperienceItem
   title: TypeExperienceItem['title']
   organism: TypeExperienceItem['organism']
   start: TypeExperienceItem['start']
@@ -31,26 +30,24 @@ export default function ExperienceItem({
     <div
       className={`ExperienceItem grid grid-cols-phi gap-4 ${className ?? ''}`}
     >
-      <div className="ExperienceItem__header col-span-2 grid grid-cols-subgrid">
-        <div className="ExperienceItem__infos">
-          <Title>{title}</Title>
-          <Organism>{organism}</Organism>
-          <p className="">{geo}</p>
-          <Date
-            start={start}
-            end={end}
-          />
-        </div>
+      <div className="ExperienceItem__infos">
+        <Title>{title}</Title>
+        <Organism>{organism}</Organism>
+        <p className="">{geo}</p>
+        <Date
+          start={start}
+          end={end}
+        />
+      </div>
 
-        <div className="ExperienceItem__jobs relative">
-          <Border />
-          <List
-            className="flex flex-col gap-2"
-            items={jobs}
-            renderItem={JobItem}
-            getKey={(item) => item.title}
-          />
-        </div>
+      <div className="ExperienceItem__jobs relative col-span-1">
+        <Border />
+        <List
+          className="flex flex-col gap-2"
+          items={jobs}
+          renderItem={JobItem}
+          getKey={(item) => item.title}
+        />
       </div>
     </div>
   )

@@ -12,5 +12,5 @@
 }
 
 @utility grid-cols-phi {
-  @apply grid-cols-[38.2%_61.8%];
+  @apply grid-cols-[0.382fr_0.618fr];
 }

@@ -10,7 +10,7 @@ export default function Section({
   hasPadding = false,
 }: SectionProps) {
   return (
-    <section className={`${className ?? 'Section'} ${hasPadding && 'p-4'}`}>
+    <section className={`${className ?? 'Section'}${hasPadding ? ' p-4' : ''}`}>
       {children}
     </section>
   )

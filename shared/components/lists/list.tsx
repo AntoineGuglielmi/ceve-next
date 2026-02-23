@@ -14,7 +14,7 @@ export default function List<T extends object>({
   getKey,
 }: ListProps<T>) {
   return (
-    <ul className={cn('List flex flex-wrap', className)}>
+    <ul className={cn('List', className)}>
       {items.map((item, index) => {
         return (
           <li key={getKey(item, index)}>
