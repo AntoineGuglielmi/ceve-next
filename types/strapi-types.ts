@@ -10,6 +10,11 @@ export interface AtomsHardSkill {
   text?: string;
 };
 
+export interface AtomsMiscItem {
+  id?: number;
+  text?: string;
+};
+
 export interface FollowSection {
   id?: number;
   documentId?: string;
@@ -59,6 +64,17 @@ export interface Intro {
   locale?: string | null;
   title?: string;
   text?: string;
+};
+
+export interface MiscSection {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  title?: string;
+  list?: AtomsMiscItem[] | null;
 };
 
 export interface SoftSkillsSection {
