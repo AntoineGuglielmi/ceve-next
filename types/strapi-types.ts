@@ -1,7 +1,24 @@
 
+export interface AtomsFollowItem {
+  id?: number;
+  icon?: string;
+  link?: string;
+};
+
 export interface AtomsHardSkill {
   id?: number;
   text?: string;
+};
+
+export interface FollowSection {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  title?: string;
+  list?: AtomsFollowItem[] | null;
 };
 
 export interface HardSkillsSection {
