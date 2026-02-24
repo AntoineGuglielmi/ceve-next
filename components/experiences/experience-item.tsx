@@ -1,4 +1,3 @@
-import { TypeExperienceItem } from '@/types/data/TypeExperiences'
 import Title from '../shared/item/title'
 import Date from '../shared/item/date'
 import List from '@/shared/components/lists/list'

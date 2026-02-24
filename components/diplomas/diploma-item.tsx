@@ -1,4 +1,3 @@
-import { TypeDiplomaItem } from '@/types/data/TypeDiplomas'
 import Title from '../shared/item/title'
 import Date from '../shared/item/date'
 import Geo from '../shared/item/geo'

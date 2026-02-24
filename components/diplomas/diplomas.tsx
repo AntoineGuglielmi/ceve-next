@@ -1,4 +1,3 @@
-import { data } from '@/data/antoine'
 import Section from '../section/section'
 import SectionTitle from '../section/section-title'
 import List from '@/shared/components/lists/list'
