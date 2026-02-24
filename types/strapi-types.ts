@@ -15,6 +15,15 @@ export interface AtomsMiscItem {
   text?: string;
 };
 
+export interface MoleculesDiplomaItem {
+  id?: number;
+  title?: string;
+  organism?: string;
+  geo?: string;
+  start?: string;
+  end?: string;
+};
+
 export interface MoleculesExperienceItem {
   id?: number;
   title?: string;
@@ -29,6 +38,17 @@ export interface MoleculesJobItem {
   id?: number;
   title?: string;
   text?: string;
+};
+
+export interface DiplomasSection {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  title?: string;
+  list?: MoleculesDiplomaItem[] | null;
 };
 
 export interface ExperiencesSection {

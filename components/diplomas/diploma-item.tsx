@@ -3,16 +3,16 @@ import Title from '../shared/item/title'
 import Date from '../shared/item/date'
 import Geo from '../shared/item/geo'
 import Organism from '../shared/item/organism'
+import { MoleculesDiplomaItem } from '@/types/strapi-types'
 
 type DiplomaItemProps = {
   className?: string
   children?: React.ReactNode
-  title: TypeDiplomaItem['title']
-  organism: TypeDiplomaItem['organism']
-  start: TypeDiplomaItem['start']
-  end: TypeDiplomaItem['end']
-  geo: TypeDiplomaItem['geo']
-  desc: TypeDiplomaItem['desc']
+  title?: MoleculesDiplomaItem['title']
+  organism?: MoleculesDiplomaItem['organism']
+  start?: MoleculesDiplomaItem['start']
+  end?: MoleculesDiplomaItem['end']
+  geo?: MoleculesDiplomaItem['geo']
 }
 
 export default function DiplomaItem({
@@ -28,8 +28,8 @@ export default function DiplomaItem({
       <div className="DiplomaItem__left flex flex-col">
         <Title>{title}</Title>
         <Date
-          end={end}
-          start={start}
+          end={end!}
+          start={start!}
         />
       </div>
 
