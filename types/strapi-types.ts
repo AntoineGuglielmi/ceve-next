@@ -40,6 +40,16 @@ export interface MoleculesJobItem {
   text?: string;
 };
 
+export interface Config {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  gen_cv_code?: string;
+};
+
 export interface DiplomasSection {
   id?: number;
   documentId?: string;
