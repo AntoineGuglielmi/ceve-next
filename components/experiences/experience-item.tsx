@@ -5,6 +5,7 @@ import JobItem from './job-item'
 import Border from '../shared/item/border'
 import Organism from '../shared/item/organism'
 import { MoleculesExperienceItem } from '@/types/strapi-types'
+import Geo from '../shared/item/geo'
 
 type ExperienceItemProps = {
   className?: string
@@ -33,7 +34,7 @@ export default function ExperienceItem({
       <div className="ExperienceItem__infos">
         <Title>{title}</Title>
         <Organism>{organism}</Organism>
-        <p className="">{geo}</p>
+        <Geo>{geo}</Geo>
         <Date
           start={start!}
           end={end!}
