@@ -1,4 +1,3 @@
-import { ActionGenerateCv } from '@/actions/generate-cv'
 import Avatar from '@/components/avatar/avatar'
 import Diplomas from '@/components/diplomas/diplomas'
 import Experiences from '@/components/experiences/experiences'
@@ -12,7 +11,9 @@ import More from '@/components/more/more'
 import Column from '@/components/shared/page/column'
 import Page from '@/components/shared/page/page'
 import SoftSkills from '@/components/soft-skills/soft-skills'
+import { ServiceGetGlobalMeta } from '@/services/global-meta'
 import { checkCode } from '@/shared/lib/chechCode'
+import { formatToYYMMDD } from '@/shared/lib/dates'
 
 type GenCvCodePageProps = {
   params: Promise<{
@@ -23,11 +24,14 @@ type GenCvCodePageProps = {
 export default async function GenCvCodePage({ params }: GenCvCodePageProps) {
   const { code } = await params
   await checkCode(code)
+  const { lastDatabaseUpdate } = await ServiceGetGlobalMeta()
+  const cvDate = formatToYYMMDD(String(lastDatabaseUpdate)!)
 
   return (
     <>
       <GenerateCv
         code={code}
+        cvDate={cvDate}
         className="fixed top-4 left-4 px-2 py-1 text-[1rem] font-bold bg-cv-orange rounded-lg"
       >
         Générer le CV

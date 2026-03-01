@@ -83,6 +83,16 @@ export interface FollowSection {
   list?: AtomsFollowItem[] | null;
 };
 
+export interface GlobalMeta {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  lastDatabaseUpdate?: Date | string;
+};
+
 export interface HardSkillsSection {
   id?: number;
   documentId?: string;
