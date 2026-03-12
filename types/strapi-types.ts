@@ -15,6 +15,11 @@ export interface AtomsMiscItem {
   text?: string;
 };
 
+export interface AtomsTechno {
+  id?: number;
+  text?: string;
+};
+
 export interface MoleculesDiplomaItem {
   id?: number;
   title?: string;
@@ -38,6 +43,8 @@ export interface MoleculesJobItem {
   id?: number;
   title?: string;
   text?: string;
+  description?: string;
+  technos?: AtomsTechno[] | null;
 };
 
 export interface Config {
