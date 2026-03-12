@@ -120,6 +120,7 @@ export interface Info {
   phone?: string;
   email?: string;
   website?: string;
+  picture?: Media | null;
 };
 
 export interface Intro {

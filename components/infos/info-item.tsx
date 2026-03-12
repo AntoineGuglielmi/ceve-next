@@ -13,14 +13,17 @@ export default function InfoItem({
   icon,
 }: ContactItemProps) {
   return (
-    <p className={`ContactItem flex gap-2 items-center ${className ?? ''}`}>
+    <p
+      className={`ContactItem flex gap-2 min-w-0 items-start ${className ?? ''}`}
+    >
       {icon && (
         <DynamicIcon
           name={icon}
           size={12}
+          className="shrink-0 mt-1.5"
         />
       )}
-      {children}
+      <span className="min-w-0 flex-1 wrap-break-word">{children}</span>
     </p>
   )
 }

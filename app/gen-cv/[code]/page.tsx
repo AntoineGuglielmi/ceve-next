@@ -28,7 +28,7 @@ export default async function GenCvCodePage({ params }: GenCvCodePageProps) {
   const cvDate = formatToYYMMDD(String(lastDatabaseUpdate)!)
 
   return (
-    <>
+    <main className="bg-slate-50 text-[11px] text-cv-anthracite flex items-center justify-center">
       <GenerateCv
         code={code}
         cvDate={cvDate}
@@ -55,6 +55,6 @@ export default async function GenCvCodePage({ params }: GenCvCodePageProps) {
           <Diplomas />
         </Column>
       </Page>
-    </>
+    </main>
   )
 }
