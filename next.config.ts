@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'cv.antoine-g.com',
+        hostname: 'cv-admin.antoine-g.com',
         pathname: '/**',
       },
     ],
