@@ -15,6 +15,8 @@ import { ServiceGetGlobalMeta } from '@/services/global-meta'
 import { checkCode } from '@/shared/lib/chechCode'
 import { formatToYYMMDD } from '@/shared/lib/dates'
 
+export const revalidate = 3600
+
 type GenCvCodePageProps = {
   params: Promise<{
     code: string
