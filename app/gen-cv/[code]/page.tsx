@@ -16,6 +16,7 @@ import { checkCode } from '@/shared/lib/chechCode'
 import { formatToYYMMDD } from '@/shared/lib/dates'
 
 export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 
 type GenCvCodePageProps = {
   params: Promise<{
