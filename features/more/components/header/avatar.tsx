@@ -15,7 +15,7 @@ export default function Avatar({ className, picture }: AvatarProps) {
       <Image
         unoptimized
         alt={alternativeText}
-        src={`${process.env.STRAPI_API_BASE_URL}${url}`}
+        src={`${process.env.STRAPI_BASE_URL}${url}`}
         loading="eager"
         fill
         className="object-cover"
