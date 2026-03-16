@@ -27,14 +27,13 @@ type GenCvCodePageProps = {
 export default async function GenCvCodePage({ params }: GenCvCodePageProps) {
   const { code } = await params
   await checkCode(code)
-  const { lastDatabaseUpdate } = await ServiceGetGlobalMeta()
-  const cvDate = formatToYYMMDD(String(lastDatabaseUpdate)!)
+  // const { lastDatabaseUpdate } = await ServiceGetGlobalMeta()
+  // const cvDate = formatToYYMMDD(String(lastDatabaseUpdate)!)
 
   return (
     <main className="bg-slate-50 text-[11px] text-cv-anthracite flex items-center justify-center">
       <GenerateCv
         code={code}
-        cvDate={cvDate}
         className="fixed top-4 left-4 px-2 py-1 text-[1rem] font-bold bg-cv-orange rounded-lg"
       >
         Générer le CV
