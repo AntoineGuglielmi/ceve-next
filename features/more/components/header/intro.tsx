@@ -1,8 +1,7 @@
-import InfoItem from '@/components/infos/info-item'
-import SectionTitle from '@/components/section/section-title'
 import Section from '@/shared/components/section'
 import { cn } from '@/shared/lib/utils'
 import { Intro as IntroSection } from '@/types/strapi-types'
+import SectionTitle from '../section/section-title'
 
 type IntroProps = {
   className?: string

@@ -1,8 +1,8 @@
-import SectionTitle from '@/components/section/section-title'
 import Section from '@/shared/components/section'
 import { ServiceGetExperiencesSection } from '@/services/experiences'
 import List from '@/shared/components/lists/list'
 import ExperienceItem from './experience-item'
+import SectionTitle from '../section/section-title'
 
 type ExperiencesProps = {
   className?: string

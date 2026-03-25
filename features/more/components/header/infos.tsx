@@ -1,8 +1,8 @@
 import InfoItem from '@/components/infos/info-item'
-import SectionTitle from '@/components/section/section-title'
 import Title from '@/components/shared/item/title'
 import Section from '@/shared/components/section'
 import { Info } from '@/types/strapi-types'
+import SectionTitle from '../section/section-title'
 
 type InfosProps = {
   className?: string

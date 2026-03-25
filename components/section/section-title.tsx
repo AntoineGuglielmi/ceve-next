@@ -1,4 +1,4 @@
-type SectionTitleProps = {
+export type SectionTitleProps = {
   className?: string
   children?: React.ReactNode
   highlighted?: boolean
