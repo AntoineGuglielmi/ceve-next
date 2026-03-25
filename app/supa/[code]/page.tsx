@@ -1,0 +1,39 @@
+import GenerateCv from '@/components/generate-cv/generate-cv'
+import ColorfulBackground from '@/features/skins/supa/components/colorful-background/colorful-background'
+import Page from '@/features/skins/supa/components/page'
+import PageSection from '@/features/skins/supa/components/page-section'
+import { checkCode } from '@/shared/lib/chechCode'
+
+export const revalidate = 3600
+export const dynamic = 'force-dynamic'
+
+type SupaPageProps = {
+  params: Promise<{
+    code: string
+  }>
+}
+
+export default async function SupaPage({ params }: SupaPageProps) {
+  const { code } = await params
+  await checkCode(code)
+
+  return (
+    <main className="bg-slate-50 text-[11px] text-cv-anthracite flex items-center justify-center">
+      <GenerateCv
+        code={code}
+        className="fixed top-4 left-4 px-2 py-1 text-[1rem] font-bold bg-cv-orange rounded-lg"
+      >
+        Générer le CV
+      </GenerateCv>
+
+      <Page>
+        <PageSection className="relative">
+          Hello
+          <ColorfulBackground className="inset-0" />
+        </PageSection>
+
+        <PageSection>Hello</PageSection>
+      </Page>
+    </main>
+  )
+}

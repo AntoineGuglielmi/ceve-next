@@ -15,6 +15,10 @@
   @apply grid-cols-[0.382fr_0.618fr];
 }
 
+@utility grid-cols-base {
+  @apply grid-cols-[0.3fr_0.7fr];
+}
+
 /* Need to style h2 */
 .Markdown {
   @apply [&>p]:mb-2 [&>ul]:mb-2 [&>ul]:list-disc [&>ul]:pl-5 [&>ol]:mb-2 [&>ol]:list-decimal [&>ol]:pl-5;
