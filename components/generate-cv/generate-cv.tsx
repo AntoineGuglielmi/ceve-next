@@ -36,7 +36,7 @@ export default function GenerateCv({
   return (
     <button
       onClick={onClick}
-      className={`GenerateCv ${className ?? ''}`}
+      className={`GenerateCv print:hidden ${className ?? ''}`}
     >
       {children}
     </button>
