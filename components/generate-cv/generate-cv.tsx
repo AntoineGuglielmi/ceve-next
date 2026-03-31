@@ -17,7 +17,7 @@ export default function GenerateCv({
     const res = await fetch('http://localhost:3000/api/generate-cv', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code }),
+      body: JSON.stringify({ code, hidden: true }),
     })
 
     const blob = await res.blob()

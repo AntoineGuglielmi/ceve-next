@@ -3,6 +3,7 @@ import { cn } from '@/shared/lib/utils'
 import Image from 'next/image'
 import Border from './border'
 import { ServiceGetInfo } from '@/services/Info'
+import CvSection from './cv-section'
 
 type IntroProps = {
   className?: string
@@ -16,7 +17,7 @@ export default async function Intro({ className, children }: IntroProps) {
   const { title, text } = intro
   const { alternativeText, url } = picture!
   return (
-    <div className={cn('Intro p-8 flex flex-col gap-3 relative', className)}>
+    <CvSection className={cn('Intro flex flex-col gap-3', className)}>
       <div className="AvatarContainer size-16 rounded-full overflow-hidden flex items-center justify-center relative">
         <Image
           fill
@@ -40,6 +41,6 @@ export default async function Intro({ className, children }: IntroProps) {
         position="bottom"
         className="left-0"
       />
-    </div>
+    </CvSection>
   )
 }
