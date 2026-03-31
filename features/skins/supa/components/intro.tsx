@@ -25,7 +25,7 @@ export default async function Intro({ className, children }: IntroProps) {
           src={`${process.env.STRAPI_BASE_URL}${url}`}
           unoptimized
           loading="eager"
-          className="object-cover scale-150 mt-2"
+          className="object-cover scale-150 mt-2 -ml-1"
         />
       </div>
       <div className="flex flex-col gap-2">
