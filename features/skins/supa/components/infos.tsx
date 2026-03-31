@@ -27,7 +27,14 @@ export default async function Infos({ className }: InfosProps) {
         size={12}
       />
       <ItemWithIcon
-        text={<Link href={website!}>{website}</Link>}
+        text={
+          <Link
+            target="_blank"
+            href={website!}
+          >
+            {website}
+          </Link>
+        }
         title="Site web"
         iconName="Link"
         size={12}

@@ -21,13 +21,13 @@ export default function ItemWithIcon({
   iconName,
   text,
   title,
-  size,
+  size = 12,
 }: ItemWithIconProps) {
   const Icon = LucideIcons[iconName] as LucideIcon
   return (
     <div className={cn(ItemWithIconVariants({ className }))}>
       <div className="ItemWithIcon__icon size-8 rounded-full bg-gray-200 flex items-center justify-center">
-        <Icon size={12} />
+        <Icon size={size} />
       </div>
       <div className="ItemWithIcon__content flex flex-col">
         <p className="fz-[6px] text-gray-400">{title}</p>

@@ -3,6 +3,7 @@ export interface AtomsFollowItem {
   id?: number;
   icon?: string;
   link?: string;
+  label?: string;
 };
 
 export interface AtomsHardSkill {

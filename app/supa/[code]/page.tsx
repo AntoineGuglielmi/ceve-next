@@ -5,6 +5,7 @@ import Infos from '@/features/skins/supa/components/infos'
 import Intro from '@/features/skins/supa/components/intro'
 import Page from '@/features/skins/supa/components/page'
 import PageSection from '@/features/skins/supa/components/page-section'
+import Socials from '@/features/skins/supa/components/socials'
 import { checkCode } from '@/shared/lib/chechCode'
 
 export const revalidate = 3600
@@ -35,6 +36,7 @@ export default async function SupaPage({ params }: SupaPageProps) {
           <Border position="right" />
           <Intro />
           <Infos />
+          <Socials />
         </PageSection>
 
         <PageSection>Hello</PageSection>
