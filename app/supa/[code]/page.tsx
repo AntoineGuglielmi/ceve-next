@@ -1,5 +1,7 @@
 import GenerateCv from '@/components/generate-cv/generate-cv'
+import Border from '@/features/skins/supa/components/border'
 import ColorfulBackground from '@/features/skins/supa/components/colorful-background/colorful-background'
+import Intro from '@/features/skins/supa/components/intro'
 import Page from '@/features/skins/supa/components/page'
 import PageSection from '@/features/skins/supa/components/page-section'
 import { checkCode } from '@/shared/lib/chechCode'
@@ -28,8 +30,9 @@ export default async function SupaPage({ params }: SupaPageProps) {
 
       <Page>
         <PageSection className="relative">
-          Hello
-          <ColorfulBackground className="inset-0" />
+          <ColorfulBackground className="inset-0 z-10" />
+          <Border position="right" />
+          <Intro />
         </PageSection>
 
         <PageSection>Hello</PageSection>

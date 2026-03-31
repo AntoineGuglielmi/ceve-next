@@ -15,6 +15,7 @@ export default function ColorfulBackground({
         'ColorfulBackground absolute overflow-hidden opacity-50',
         className,
       )}
+      inert
     >
       <Circle />
       <Circle
