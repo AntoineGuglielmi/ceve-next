@@ -1,6 +1,8 @@
 import GenerateCv from '@/components/generate-cv/generate-cv'
 import Border from '@/features/skins/supa/components/border'
 import ColorfulBackground from '@/features/skins/supa/components/colorful-background/colorful-background'
+import CvSection from '@/features/skins/supa/components/cv-section/cv-section'
+import Experience from '@/features/skins/supa/components/experience/experience'
 import Infos from '@/features/skins/supa/components/infos'
 import Intro from '@/features/skins/supa/components/intro'
 import Langages from '@/features/skins/supa/components/langages'
@@ -72,7 +74,10 @@ export default async function SupaPage({ params }: SupaPageProps) {
           className="relative"
         />
 
-        <PageSection>Hello</PageSection>
+        <PageSection>
+          <Experience />
+          <CvSection className="pt-0">Hello</CvSection>
+        </PageSection>
       </Page>
     </main>
   )

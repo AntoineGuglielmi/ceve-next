@@ -1,9 +1,9 @@
 import { cva } from 'class-variance-authority'
 import { cn } from '@/shared/lib/utils'
 import { ServiceGetFollowSection } from '@/services/follows'
-import CvSection from './cv-section'
 import ItemWithIcon from './item-with-icon'
 import Link from 'next/link'
+import CvSection from './cv-section/cv-section'
 
 type SocialsProps = {
   className?: string

@@ -1,8 +1,8 @@
 import { cva } from 'class-variance-authority'
 import { cn } from '@/shared/lib/utils'
-import CvSection from './cv-section'
 import { FR, GB } from 'country-flag-icons/react/1x1'
 import { ServiceGetHardSkillsSection } from '@/services/skills'
+import CvSection from './cv-section/cv-section'
 
 type LangagesProps = {
   className?: string

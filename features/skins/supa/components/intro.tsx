@@ -2,7 +2,7 @@ import { ServiceGetIntro } from '@/services/Intro'
 import { cn } from '@/shared/lib/utils'
 import Image from 'next/image'
 import { ServiceGetInfo } from '@/services/Info'
-import CvSection from './cv-section'
+import CvSection from './cv-section/cv-section'
 
 type IntroProps = {
   className?: string

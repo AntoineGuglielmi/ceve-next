@@ -1,8 +1,8 @@
 import { cva } from 'class-variance-authority'
 import { cn } from '@/shared/lib/utils'
-import CvSection from './cv-section'
 import { ServiceGetMiscSection } from '@/services/misc'
 import ItemWithIcon from './item-with-icon'
+import CvSection from './cv-section/cv-section'
 
 type MiscProps = {
   className?: string

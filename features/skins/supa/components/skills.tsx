@@ -4,8 +4,8 @@ import {
   ServiceGetHardSkillsSection,
   ServiceGetSoftSkillsSection,
 } from '@/services/skills'
-import CvSection from './cv-section'
 import ItemWithIcon from './item-with-icon'
+import CvSection from './cv-section/cv-section'
 
 type SkillsProps = {
   className?: string

@@ -41,6 +41,7 @@ export interface MoleculesExperienceItem {
   start?: string;
   end?: string;
   jobs?: MoleculesJobItem[] | null;
+  description?: string;
 };
 
 export interface MoleculesJobItem {

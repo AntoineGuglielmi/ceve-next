@@ -1,8 +1,8 @@
 import { cva } from 'class-variance-authority'
 import { cn } from '@/shared/lib/utils'
-import CvSection from './cv-section'
 import { ServiceGetPlusSection } from '@/services/plus'
 import QrCode from '@/components/more/qr-code'
+import CvSection from './cv-section/cv-section'
 
 type MoreProps = {
   className?: string
