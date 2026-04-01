@@ -1,7 +1,6 @@
 import { ServiceGetIntro } from '@/services/Intro'
 import { cn } from '@/shared/lib/utils'
 import Image from 'next/image'
-import Border from './border'
 import { ServiceGetInfo } from '@/services/Info'
 import CvSection from './cv-section'
 
@@ -10,7 +9,7 @@ type IntroProps = {
   children?: React.ReactNode
 }
 
-export default async function Intro({ className, children }: IntroProps) {
+export default async function Intro({ className }: IntroProps) {
   const infos = await ServiceGetInfo()
   const intro = await ServiceGetIntro()
   const { firstname, lastname, picture } = infos
@@ -37,7 +36,6 @@ export default async function Intro({ className, children }: IntroProps) {
         </p>
         <p>{text}</p>
       </div>
-      <Border position="bottom" />
     </CvSection>
   )
 }

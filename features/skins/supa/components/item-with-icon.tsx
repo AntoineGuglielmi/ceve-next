@@ -32,7 +32,7 @@ export default function ItemWithIcon({
         </div>
       )}
       <div className="ItemWithIcon__content flex flex-col">
-        {title && <p className="fz-[6px] text-gray-400">{title}</p>}
+        {title && <p className="fz-2 text-gray-400">{title}</p>}
         <p className="min-w-0 flex-1 wrap-break-word">{text}</p>
       </div>
     </div>

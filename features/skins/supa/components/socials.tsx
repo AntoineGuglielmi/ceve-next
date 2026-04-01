@@ -2,10 +2,8 @@ import { cva } from 'class-variance-authority'
 import { cn } from '@/shared/lib/utils'
 import { ServiceGetFollowSection } from '@/services/follows'
 import CvSection from './cv-section'
-import List from '@/shared/components/lists/list'
 import ItemWithIcon from './item-with-icon'
 import Link from 'next/link'
-import Border from './border'
 
 type SocialsProps = {
   className?: string
@@ -36,7 +34,6 @@ export default async function Socials({ className }: SocialsProps) {
           }
         />
       ))}
-      <Border position="bottom" />
     </CvSection>
   )
 }

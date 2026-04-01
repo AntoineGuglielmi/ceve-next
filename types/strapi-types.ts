@@ -11,6 +11,7 @@ export interface AtomsHardSkill {
   text?: string;
   show?: boolean;
   skill_category?: SkillCategory | null;
+  icon?: string;
 };
 
 export interface AtomsMiscItem {

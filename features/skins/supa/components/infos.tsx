@@ -4,7 +4,6 @@ import { ServiceGetInfo } from '@/services/Info'
 import CvSection from './cv-section'
 import ItemWithIcon from './item-with-icon'
 import Link from 'next/link'
-import Border from './border'
 
 type InfosProps = {
   className?: string
@@ -51,7 +50,6 @@ export default async function Infos({ className }: InfosProps) {
         iconName="Pin"
         size={12}
       />
-      <Border position="bottom" />
     </CvSection>
   )
 }

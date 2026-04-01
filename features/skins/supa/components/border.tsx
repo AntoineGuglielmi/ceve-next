@@ -7,14 +7,14 @@ type BorderProps = {
 }
 
 const BorderVariants = cva(
-  'Border absolute bg-linear-to-b from-white via-black/25 to-white',
+  'Border absolute bg-linear-to-b from-white/0 via-black/15 to-white/0',
   {
     variants: {
       position: {
-        top: 'h-[0.5px] w-full top-0',
-        left: 'w-[0.5px] h-full left-0',
-        bottom: 'h-[0.5px] w-full bottom-0',
-        right: 'w-[0.5px] h-full right-0',
+        top: 'h-px w-full top-0',
+        left: 'w-px h-full left-0',
+        bottom: 'h-px w-full bottom-0',
+        right: 'w-px h-full right-0',
       },
     },
     compoundVariants: [

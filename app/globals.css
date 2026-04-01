@@ -16,7 +16,7 @@
 }
 
 @utility grid-cols-base {
-  @apply grid-cols-[0.3fr_0.7fr];
+  @apply grid-cols-[0.3fr_auto_0.7fr];
 }
 
 /* Need to style h2 */
