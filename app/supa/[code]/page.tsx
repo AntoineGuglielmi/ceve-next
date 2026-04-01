@@ -3,6 +3,7 @@ import Border from '@/features/skins/supa/components/border'
 import ColorfulBackground from '@/features/skins/supa/components/colorful-background/colorful-background'
 import CvSection from '@/features/skins/supa/components/cv-section/cv-section'
 import Experience from '@/features/skins/supa/components/experience/experience'
+import HighlightedProjects from '@/features/skins/supa/components/highlighted-projects/highlighted-projects'
 import Infos from '@/features/skins/supa/components/infos'
 import Intro from '@/features/skins/supa/components/intro'
 import Langages from '@/features/skins/supa/components/langages'
@@ -26,7 +27,7 @@ export default async function SupaPage({ params }: SupaPageProps) {
   await checkCode(code)
 
   return (
-    <main className="bg-slate-50 text-[11px] text-cv-anthracite flex items-center justify-center">
+    <main className="bg-white text-[11px] text-cv-anthracite flex items-center justify-center">
       <GenerateCv
         code={code}
         className="fixed top-4 left-4 px-2 py-1 fz-4 font-bold bg-cv-orange rounded-lg"
@@ -76,6 +77,7 @@ export default async function SupaPage({ params }: SupaPageProps) {
 
         <PageSection>
           <Experience />
+          <HighlightedProjects />
           <CvSection className="pt-0">Hello</CvSection>
         </PageSection>
       </Page>

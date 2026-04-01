@@ -14,6 +14,11 @@ export interface AtomsHardSkill {
   icon?: string;
 };
 
+export interface AtomsHighlightedProject {
+  id?: number;
+  project?: Project | null;
+};
+
 export interface AtomsMiscItem {
   id?: number;
   text?: string;
@@ -116,6 +121,17 @@ export interface HardSkillsSection {
   list?: AtomsHardSkill[] | null;
 };
 
+export interface HighlightedProject {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  list?: any;
+  title?: string;
+};
+
 export interface Info {
   id?: number;
   documentId?: string;
@@ -166,6 +182,19 @@ export interface PlusSection {
   locale?: string | null;
   title?: string;
   text?: string;
+  link?: string;
+};
+
+export interface Project {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  title?: string;
+  short_desc?: string;
+  long_desc?: string;
   link?: string;
 };
 
