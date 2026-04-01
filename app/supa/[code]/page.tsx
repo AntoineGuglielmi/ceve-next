@@ -4,6 +4,7 @@ import ColorfulBackground from '@/features/skins/supa/components/colorful-backgr
 import Infos from '@/features/skins/supa/components/infos'
 import Intro from '@/features/skins/supa/components/intro'
 import Langages from '@/features/skins/supa/components/langages'
+import More from '@/features/skins/supa/components/more'
 import Page from '@/features/skins/supa/components/page'
 import PageSection from '@/features/skins/supa/components/page-section'
 import Socials from '@/features/skins/supa/components/socials'
@@ -34,26 +35,36 @@ export default async function SupaPage({ params }: SupaPageProps) {
       <Page>
         <PageSection className="relative">
           <ColorfulBackground className="inset-0 z-10" />
+
           <Intro />
+
           <Border
             className="relative"
             position="bottom"
           />
+
           <Infos />
+
           <Border
             className="relative"
             position="bottom"
           />
+
           <Socials />
+
           <Border
             className="relative"
             position="bottom"
           />
+
           <Langages />
+
           <Border
             className="relative"
             position="bottom"
           />
+
+          <More />
         </PageSection>
 
         <Border
