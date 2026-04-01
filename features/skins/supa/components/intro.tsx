@@ -37,10 +37,7 @@ export default async function Intro({ className, children }: IntroProps) {
         </p>
         <p>{text}</p>
       </div>
-      <Border
-        position="bottom"
-        className="left-0"
-      />
+      <Border position="bottom" />
     </CvSection>
   )
 }

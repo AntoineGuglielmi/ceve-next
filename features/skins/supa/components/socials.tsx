@@ -36,10 +36,7 @@ export default async function Socials({ className }: SocialsProps) {
           }
         />
       ))}
-      <Border
-        position="bottom"
-        className="left-0"
-      />
+      <Border position="bottom" />
     </CvSection>
   )
 }

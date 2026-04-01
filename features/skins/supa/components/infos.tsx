@@ -51,10 +51,7 @@ export default async function Infos({ className }: InfosProps) {
         iconName="Pin"
         size={12}
       />
-      <Border
-        position="bottom"
-        className="left-0"
-      />
+      <Border position="bottom" />
     </CvSection>
   )
 }

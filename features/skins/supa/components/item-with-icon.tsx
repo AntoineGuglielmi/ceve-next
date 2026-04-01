@@ -5,10 +5,10 @@ import { LucideIcon, LucideProps } from 'lucide-react'
 
 type ItemWithIconProps = {
   className?: string
-  title: string
+  title?: string
   text: string | React.ReactNode
   size?: LucideProps['size']
-  iconName: keyof typeof LucideIcons
+  iconName?: keyof typeof LucideIcons
 }
 
 const ItemWithIconVariants = cva('ItemWithIcon flex gap-2 items-center', {
@@ -23,14 +23,16 @@ export default function ItemWithIcon({
   title,
   size = 12,
 }: ItemWithIconProps) {
-  const Icon = LucideIcons[iconName] as LucideIcon
+  const Icon = iconName ? (LucideIcons[iconName] as LucideIcon) : null
   return (
     <div className={cn(ItemWithIconVariants({ className }))}>
-      <div className="ItemWithIcon__icon size-8 rounded-full bg-gray-200 flex items-center justify-center">
-        <Icon size={size} />
-      </div>
+      {Icon && (
+        <div className="ItemWithIcon__icon size-8 rounded-full bg-gray-200 flex items-center justify-center">
+          <Icon size={size} />
+        </div>
+      )}
       <div className="ItemWithIcon__content flex flex-col">
-        <p className="fz-[6px] text-gray-400">{title}</p>
+        {title && <p className="fz-[6px] text-gray-400">{title}</p>}
         <p className="min-w-0 flex-1 wrap-break-word">{text}</p>
       </div>
     </div>

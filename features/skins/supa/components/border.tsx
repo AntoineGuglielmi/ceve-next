@@ -20,11 +20,11 @@ const BorderVariants = cva(
     compoundVariants: [
       {
         position: ['top', 'bottom'],
-        class: 'bg-linear-to-r',
+        class: 'bg-linear-to-r left-0',
       },
       {
         position: ['left', 'right'],
-        class: 'bg-linear-to-b',
+        class: 'bg-linear-to-b top-0',
       },
     ],
     defaultVariants: {
