@@ -11,7 +11,7 @@ type ItemWithIconProps = {
   iconName: keyof typeof LucideIcons
 }
 
-const ItemWithIconVariants = cva('ItemWithIcon flex gap-2', {
+const ItemWithIconVariants = cva('ItemWithIcon flex gap-2 items-center', {
   variants: {},
   defaultVariants: {},
 })

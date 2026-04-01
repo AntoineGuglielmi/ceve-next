@@ -10,7 +10,7 @@ type InfosProps = {
   className?: string
 }
 
-const InfosVariants = cva('Infos flex flex-col gap-2', {
+const InfosVariants = cva('Infos flex flex-col gap-3', {
   variants: {},
   defaultVariants: {},
 })
