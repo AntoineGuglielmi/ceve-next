@@ -9,6 +9,8 @@ export interface AtomsFollowItem {
 export interface AtomsHardSkill {
   id?: number;
   text?: string;
+  show?: boolean;
+  skill_category?: SkillCategory | null;
 };
 
 export interface AtomsMiscItem {
@@ -163,6 +165,16 @@ export interface PlusSection {
   title?: string;
   text?: string;
   link?: string;
+};
+
+export interface SkillCategory {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  label?: string;
 };
 
 export interface SoftSkillsSection {

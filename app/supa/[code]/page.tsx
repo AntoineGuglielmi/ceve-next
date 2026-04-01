@@ -6,6 +6,7 @@ import Intro from '@/features/skins/supa/components/intro'
 import Misc from '@/features/skins/supa/components/misc'
 import Page from '@/features/skins/supa/components/page'
 import PageSection from '@/features/skins/supa/components/page-section'
+import Skills from '@/features/skins/supa/components/skills'
 import Socials from '@/features/skins/supa/components/socials'
 import { checkCode } from '@/shared/lib/chechCode'
 
