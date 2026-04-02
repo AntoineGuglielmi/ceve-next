@@ -3,6 +3,7 @@ import { cn } from '@/shared/lib/utils'
 import Image from 'next/image'
 import { ServiceGetInfo } from '@/services/Info'
 import CvSection from './cv-section/cv-section'
+import SectionTitle from './cv-section/section-title'
 
 type IntroProps = {
   className?: string
@@ -28,12 +29,15 @@ export default async function Intro({ className }: IntroProps) {
         />
       </div>
       <div className="flex flex-col gap-2">
-        <h2 className="fz-4 font-bold">
+        <h1 className="fz-5 font-bold">
           {firstname} {lastname}
-        </h2>
-        <p className="fz-3 font-bold bg-linear-to-r from-[#A478E8] to-[#516CF7] bg-clip-text text-transparent">
+        </h1>
+        <SectionTitle
+          variant="accent"
+          className="mb-0"
+        >
           {title}
-        </p>
+        </SectionTitle>
         <p>{text}</p>
       </div>
     </CvSection>

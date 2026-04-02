@@ -35,7 +35,7 @@ export default async function Langages({ className }: LangagesProps) {
             className="flex gap-2 items-center"
           >
             {Icon && (
-              <div className="size-5 rounded-full overflow-hidden">
+              <div className="size-8 rounded-full overflow-hidden">
                 <Icon />
               </div>
             )}
