@@ -17,7 +17,7 @@ const HighlightedProjectsVariants = cva('HighlightedProjects pt-0', {
 
 const ProjectItem = ({ title, link, short_desc }: Project) => {
   return (
-    <div className="flex flex-col gap-1 p-3 rounded bg-[#F7F9FC] transition h-full">
+    <div className="flex flex-col gap-1 p-3 tile transition h-full">
       <h3 className="font-bold">{title}</h3>
       <p>{short_desc}</p>
     </div>
@@ -39,7 +39,7 @@ export default async function HighlightedProjects({
     <CvSection className={cn(HighlightedProjectsVariants({ className }))}>
       <SectionTitle>{title}</SectionTitle>
       <List
-        className="grid grid-cols-[1fr_1fr] gap-3"
+        className="grid grid-cols-[1fr_1fr] gap-2"
         items={projects}
         renderItem={ProjectItem}
         getKey={(project) => project.id!}

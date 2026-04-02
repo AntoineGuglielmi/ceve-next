@@ -7,10 +7,13 @@ type ExperienceItemProps = {
   className?: string
 } & MoleculesExperienceItem
 
-const ExperienceItemVariants = cva('ExperienceItem grid grid-cols-[3fr_4fr]', {
-  variants: {},
-  defaultVariants: {},
-})
+const ExperienceItemVariants = cva(
+  'ExperienceItem grid grid-cols-[3fr_4fr] tile p-3',
+  {
+    variants: {},
+    defaultVariants: {},
+  },
+)
 
 export default function ExperienceItem({
   className,
@@ -24,7 +27,7 @@ export default function ExperienceItem({
 }: ExperienceItemProps) {
   return (
     <div className={cn(ExperienceItemVariants({ className }))}>
-      <div className="ExperienceItem__infos">
+      <div className="ExperienceItem__infos flex flex-col gap-1">
         <header className="flex gap-1 items-center fz-2">
           <p className="shrink-0">{start}</p>
           <Minus size={10} />
@@ -32,8 +35,8 @@ export default function ExperienceItem({
           <MapPin size={12} />
           {geo}
         </header>
-        <p className="">{title}</p>
-        <h4 className="fz-3 font-bold">{organism}</h4>
+        <h4 className="fz-3 font-bold">{title}</h4>
+        <p className="">{organism}</p>
       </div>
       <div className="ExperienceItem__description">
         <p className="fz-2">{description}</p>

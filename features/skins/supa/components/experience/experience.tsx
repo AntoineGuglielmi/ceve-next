@@ -24,7 +24,7 @@ export default async function Experience({ className }: ExperienceProps) {
         items={experiences!}
         renderItem={ExperienceItem}
         getKey={(exp) => exp.id!}
-        className="flex flex-col gap-3"
+        className="flex flex-col gap-2"
       />
     </CvSection>
   )

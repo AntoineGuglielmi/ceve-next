@@ -30,3 +30,7 @@
   font-size: --spacing(--value(integer));
   font-size: --value([*]);
 }
+
+@utility tile {
+  @apply rounded bg-[#F7F9FC];
+}

@@ -9,7 +9,7 @@ type SocialsProps = {
   className?: string
 }
 
-const SocialsVariants = cva('Socials flex flex-col gap-3', {
+const SocialsVariants = cva('Socials flex flex-col gap-2', {
   variants: {},
   defaultVariants: {},
 })

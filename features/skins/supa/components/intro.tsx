@@ -17,7 +17,7 @@ export default async function Intro({ className }: IntroProps) {
   const { title, text } = intro
   const { alternativeText, url } = picture!
   return (
-    <CvSection className={cn('Intro flex flex-col gap-3', className)}>
+    <CvSection className={cn('Intro flex flex-col gap-2', className)}>
       <div className="AvatarContainer size-16 rounded-full overflow-hidden flex items-center justify-center relative">
         <Image
           fill

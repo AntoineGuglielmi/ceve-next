@@ -8,7 +8,7 @@ type MoreProps = {
   className?: string
 }
 
-const MoreVariants = cva('More flex flex-col gap-3', {
+const MoreVariants = cva('More flex flex-col gap-2', {
   variants: {},
   defaultVariants: {},
 })

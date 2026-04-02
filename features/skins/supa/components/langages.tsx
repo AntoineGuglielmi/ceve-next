@@ -9,7 +9,7 @@ type LangagesProps = {
   children?: React.ReactNode
 }
 
-const LangagesVariants = cva('Langages flex flex-col gap-3', {
+const LangagesVariants = cva('Langages flex flex-col gap-2', {
   variants: {},
   defaultVariants: {},
 })
