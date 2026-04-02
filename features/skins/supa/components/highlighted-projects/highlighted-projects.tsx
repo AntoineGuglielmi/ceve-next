@@ -36,7 +36,7 @@ export default async function HighlightedProjects({
         className="grid grid-cols-[1fr_1fr] gap-2"
         items={projects}
         renderItem={ProjectItem}
-        getKey={(project) => project.id!}
+        getKey={(project: Project) => project.id!}
       />
     </CvSection>
   )

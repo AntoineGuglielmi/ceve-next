@@ -1,11 +1,11 @@
 import { cn } from '@/shared/lib/utils'
-import { CSSProperties } from 'react'
+import { CSSProperties, Key } from 'react'
 
 type ListProps<T extends object, P extends object> = {
   className?: string
   items: Array<T>
   renderItem: React.ComponentType<T & P>
-  getKey: (item: T, index: number) => React.Key
+  getKey: (item: T, index: number) => Key
   style?: CSSProperties
   itemExtraProps?: P
 }
