@@ -28,13 +28,7 @@ export default async function HighlightedProjects({
   className,
 }: HighlightedProjectsProps) {
   const { list, title } = await ServiceGetHighlightedProjects()
-  console.log({
-    list,
-  })
   const projects = list.map(({ project }: AtomsHighlightedProject) => project)
-  console.log({
-    projects,
-  })
   return (
     <CvSection className={cn(HighlightedProjectsVariants({ className }))}>
       <SectionTitle>{title}</SectionTitle>

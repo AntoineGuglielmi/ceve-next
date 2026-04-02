@@ -17,9 +17,6 @@ const MiscVariants = cva('Misc', {
 export default async function Misc({ className, children }: MiscProps) {
   const misc = await ServiceGetMiscSection()
   const { list } = misc
-  console.log({
-    misc,
-  })
   return (
     <CvSection className={cn(MiscVariants({ className }))}>
       {list!.map(({ id, text }) => (
