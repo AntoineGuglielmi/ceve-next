@@ -8,7 +8,7 @@ type DiplomaItemProps = {
 } & MoleculesDiplomaItem
 
 const DiplomaItemVariants = cva(
-  'DiplomaItem tile p-3 h-full flex flex-col gap-1',
+  'DiplomaItem tile p-2 h-full flex flex-col gap-1',
   {
     variants: {},
     defaultVariants: {},

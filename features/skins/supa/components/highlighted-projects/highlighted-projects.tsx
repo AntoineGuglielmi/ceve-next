@@ -17,7 +17,7 @@ const HighlightedProjectsVariants = cva('HighlightedProjects pt-0', {
 
 const ProjectItem = ({ title, link, short_desc }: Project) => {
   return (
-    <div className="flex flex-col gap-1 p-3 tile transition h-full">
+    <div className="flex flex-col gap-1 p-2 tile transition h-full">
       <h3 className="font-bold">{title}</h3>
       <p>{short_desc}</p>
     </div>

@@ -7,7 +7,7 @@ type SectionTitleProps = {
   children?: React.ReactNode
 }
 
-const SectionTitleVariants = cva('SectionTitle fz-[18px] font-bold mb-4', {
+const SectionTitleVariants = cva('SectionTitle fz-[18px] font-bold mb-2', {
   variants: {
     variant: {
       default: '',

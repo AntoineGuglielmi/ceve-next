@@ -198,6 +198,17 @@ export interface Project {
   link?: string;
 };
 
+export interface Skill {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  title?: string;
+  skills?: Skill[] | null;
+};
+
 export interface SkillCategory {
   id?: number;
   documentId?: string;
@@ -206,6 +217,17 @@ export interface SkillCategory {
   publishedAt?: Date | string;
   locale?: string | null;
   label?: string;
+};
+
+export interface SkillsSection {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  title?: string;
+  skills?: Skill[] | null;
 };
 
 export interface SoftSkillsSection {

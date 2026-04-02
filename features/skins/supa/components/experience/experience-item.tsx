@@ -8,7 +8,7 @@ type ExperienceItemProps = {
 } & MoleculesExperienceItem
 
 const ExperienceItemVariants = cva(
-  'ExperienceItem grid grid-cols-[3fr_4fr] tile p-3',
+  'ExperienceItem grid grid-cols-[3fr_4fr] tile p-2',
   {
     variants: {},
     defaultVariants: {},

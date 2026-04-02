@@ -1,21 +1,23 @@
 import { cn } from '@/shared/lib/utils'
-import { HTMLAttributes } from 'react'
+import { CSSProperties } from 'react'
 
-type ListProps<T extends object> = {
+type ListProps<T extends object, P extends object> = {
   className?: string
   items: Array<T>
-  renderItem: React.ComponentType<T>
+  renderItem: React.ComponentType<T & P>
   getKey: (item: T, index: number) => React.Key
-  style?: HTMLAttributes<T>['style']
+  style?: CSSProperties
+  itemExtraProps?: P
 }
 
-export default function List<T extends object>({
+export default function List<T extends object, P extends object>({
   className,
   items,
   renderItem: Item,
   getKey,
   style,
-}: ListProps<T>) {
+  itemExtraProps,
+}: ListProps<T, P>) {
   return (
     <ul
       className={cn('List', className)}
@@ -24,7 +26,7 @@ export default function List<T extends object>({
       {items.map((item, index) => {
         return (
           <li key={getKey(item, index)}>
-            <Item {...item} />
+            <Item {...({ ...item, ...itemExtraProps } as T & P)} />
           </li>
         )
       })}
