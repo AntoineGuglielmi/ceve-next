@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority'
 import { cn } from '@/shared/lib/utils'
-import Page from '@/features/skins/supa/components/page'
+import Page from '@/features/skins/supa/components/print/page'
 
 type SkinIsLoadingProps = {
   className?: string
