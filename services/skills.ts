@@ -1,7 +1,11 @@
 'use server'
 
 import { getStrapiClient } from '@/data/strapi-client'
-import { HardSkillsSection, SoftSkillsSection } from '@/types/strapi-types'
+import {
+  HardSkillsSection,
+  SkillsSection,
+  SoftSkillsSection,
+} from '@/types/strapi-types'
 
 export const ServiceGetHardSkillsSection =
   async (): Promise<HardSkillsSection> => {
@@ -30,3 +34,24 @@ export const ServiceGetSoftSkillsSection =
     })
     return data
   }
+
+export const ServiceGetSkillsSection = async (): Promise<SkillsSection> => {
+  const strapiClient = await getStrapiClient()
+  const softSkillsSection = strapiClient.single('skills-section')
+  const { data } = await softSkillsSection.find({
+    populate: {
+      skills: {
+        populate: {
+          skills: {
+            populate: {
+              skills: {
+                populate: '*',
+              },
+            },
+          },
+        },
+      },
+    },
+  })
+  return data
+}

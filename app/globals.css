@@ -15,8 +15,26 @@
   @apply grid-cols-[0.382fr_0.618fr];
 }
 
-/* Need to stylise p and list in markdown */
-/* add padding and list type */
+@utility grid-cols-base {
+  @apply grid-cols-[0.3fr_auto_0.7fr];
+}
+
+/* Need to style h2 */
 .Markdown {
   @apply [&>p]:mb-2 [&>ul]:mb-2 [&>ul]:list-disc [&>ul]:pl-5 [&>ol]:mb-2 [&>ol]:list-decimal [&>ol]:pl-5;
+  @apply [&>h2]:mb-4 [&>h2]:text-lg [&>h2]:font-bold;
+}
+
+/* prettier-ignore */
+@utility fz-* {
+  font-size: --spacing(--value(integer));
+  font-size: --value([*]);
+}
+
+@utility tile {
+  @apply rounded bg-[#F7F9FC];
+}
+
+@utility accent-text {
+  @apply bg-linear-to-r from-[#A478E8] to-[#516CF7] bg-clip-text text-transparent;
 }

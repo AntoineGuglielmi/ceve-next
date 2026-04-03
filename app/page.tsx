@@ -1,6 +1,6 @@
-import Experiences from '@/features/more/components/experiences/experiences'
-import Header from '@/features/more/components/header/header'
-import SectionGroup from '@/shared/components/section-group'
+import { ServiceGetConfig } from '@/services/config'
+import PublicDevNav from '@/shared/components/dev-nav/public-dev-nav'
+import { notFound } from 'next/navigation'
 
 type MorePageProps = {
   params: Promise<void>
@@ -8,13 +8,23 @@ type MorePageProps = {
 
 export const dynamic = 'force-dynamic'
 
-export default function MorePage({}: MorePageProps) {
+export default async function MorePage({}: MorePageProps) {
+  const { skin } = await ServiceGetConfig()
+  if (!skin) {
+    notFound()
+  }
+
+  const { code: skinCode } = skin!
+
+  const SelectedSkin = await import(
+    `./skins/[code]/${skinCode}/PublicView`
+  ).then((mod) => mod.default)
   return (
-    <main className="flex @container/main flex-col text-cv-anthracite w-full max-w-[21cm] mx-auto shadow-[0_0_0.5rem_0_rgba(0,0,0,0.15)] bg-cv-blanc ">
-      <Header />
-      <SectionGroup>
-        <Experiences />
-      </SectionGroup>
-    </main>
+    <>
+      {process.env.NODE_ENV === 'development' && <PublicDevNav />}
+      <main className="flex @container/main flex-col text-cv-anthracite w-full max-w-240 mx-auto">
+        <SelectedSkin />
+      </main>
+    </>
   )
 }

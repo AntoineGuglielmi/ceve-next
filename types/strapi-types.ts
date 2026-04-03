@@ -3,11 +3,20 @@ export interface AtomsFollowItem {
   id?: number;
   icon?: string;
   link?: string;
+  label?: string;
 };
 
 export interface AtomsHardSkill {
   id?: number;
   text?: string;
+  show?: boolean;
+  skill_category?: SkillCategory | null;
+  icon?: string;
+};
+
+export interface AtomsHighlightedProject {
+  id?: number;
+  project?: Project | null;
 };
 
 export interface AtomsMiscItem {
@@ -37,6 +46,7 @@ export interface MoleculesExperienceItem {
   start?: string;
   end?: string;
   jobs?: MoleculesJobItem[] | null;
+  description?: string;
 };
 
 export interface MoleculesJobItem {
@@ -55,6 +65,7 @@ export interface Config {
   publishedAt?: Date | string;
   locale?: string | null;
   gen_cv_code?: string;
+  skin?: Skin | null;
 };
 
 export interface DiplomasSection {
@@ -111,6 +122,17 @@ export interface HardSkillsSection {
   list?: AtomsHardSkill[] | null;
 };
 
+export interface HighlightedProject {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  list?: any;
+  title?: string;
+};
+
 export interface Info {
   id?: number;
   documentId?: string;
@@ -162,6 +184,63 @@ export interface PlusSection {
   title?: string;
   text?: string;
   link?: string;
+};
+
+export interface Project {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  title?: string;
+  short_desc?: string;
+  long_desc?: string;
+  link?: string;
+  icon?: string;
+};
+
+export interface Skill {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  title?: string;
+  skills?: Skill[] | null;
+};
+
+export interface SkillCategory {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  label?: string;
+};
+
+export interface SkillsSection {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  title?: string;
+  skills?: Skill[] | null;
+};
+
+export interface Skin {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  name?: string;
+  code?: string;
 };
 
 export interface SoftSkillsSection {

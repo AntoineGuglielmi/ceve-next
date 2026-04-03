@@ -1,0 +1,49 @@
+'use client'
+
+import { SyntheticEvent } from 'react'
+import DevNavLink from './dev-nav-link'
+
+type GenerateCvProps = {
+  className?: string
+  children?: React.ReactNode
+  code?: string
+  cvDate?: string
+}
+
+export default function GenerateCv({
+  className,
+  children,
+  code,
+  cvDate,
+}: GenerateCvProps) {
+  const onClick = async (e: SyntheticEvent) => {
+    e.preventDefault()
+    const res = await fetch('http://localhost:3000/api/generate-cv', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ code, hidden: true }),
+    })
+
+    const blob = await res.blob()
+    const url = URL.createObjectURL(blob)
+
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `cv-antoine-guglielmi-${cvDate}.pdf`
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+
+    URL.revokeObjectURL(url)
+  }
+
+  return (
+    <DevNavLink
+      href={''}
+      onClick={onClick}
+      className={`GenerateCv ${className ?? ''}`}
+    >
+      {children}
+    </DevNavLink>
+  )
+}
