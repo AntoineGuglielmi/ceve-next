@@ -5,5 +5,5 @@ type SkinPageProps = {
 }
 
 export default function SkinPage({}: SkinPageProps) {
-  return redirect(process.env.AUTO_REDIRECT!)
+  redirect(process.env.AUTO_REDIRECT!)
 }

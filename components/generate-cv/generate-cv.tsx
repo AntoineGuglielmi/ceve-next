@@ -1,5 +1,8 @@
 'use client'
 
+import AdminLink from '@/shared/components/admin-link'
+import { SyntheticEvent } from 'react'
+
 type GenerateCvProps = {
   className?: string
   children?: React.ReactNode
@@ -13,7 +16,8 @@ export default function GenerateCv({
   code,
   cvDate,
 }: GenerateCvProps) {
-  const onClick = async () => {
+  const onClick = async (e: SyntheticEvent) => {
+    e.preventDefault()
     const res = await fetch('http://localhost:3000/api/generate-cv', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -34,11 +38,12 @@ export default function GenerateCv({
   }
 
   return (
-    <button
+    <AdminLink
+      href={''}
       onClick={onClick}
       className={`GenerateCv ${className ?? ''}`}
     >
       {children}
-    </button>
+    </AdminLink>
   )
 }

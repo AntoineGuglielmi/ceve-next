@@ -1,10 +1,10 @@
 import GenerateCv from '@/components/generate-cv/generate-cv'
-import Link from 'next/link'
 import { notFound, redirect } from 'next/navigation'
 import { Suspense } from 'react'
 import SkinIsLoading from './SkinIsLoading'
 import { checkCode } from '@/shared/lib/checkCode'
 import { ServiceGetConfig } from '@/services/config'
+import AdminLink from '@/shared/components/admin-link'
 
 type CodePageProps = {
   params: Promise<{
@@ -36,18 +36,8 @@ export default async function CodePage({ params }: CodePageProps) {
     <>
       <Suspense fallback={<SkinIsLoading />}>
         <nav className="fixed top-4 left-4 flex flex-col gap-2 print:hidden">
-          <GenerateCv
-            code={code}
-            className="bg-amber-500/50 p-4 font-bold rounded"
-          >
-            Générer le CV
-          </GenerateCv>
-          <Link
-            className="bg-amber-500/50 p-4 font-bold rounded"
-            href="/"
-          >
-            Accueil
-          </Link>
+          <GenerateCv code={code}>Générer le CV</GenerateCv>
+          <AdminLink href="/">Accueil</AdminLink>
         </nav>
         <main className="bg-white text-[11px] text-cv-anthracite flex items-center justify-center not-print:py-8">
           <SelectedSkin />
