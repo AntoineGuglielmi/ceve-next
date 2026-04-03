@@ -196,6 +196,7 @@ export interface Project {
   short_desc?: string;
   long_desc?: string;
   link?: string;
+  icon?: string;
 };
 
 export interface Skill {

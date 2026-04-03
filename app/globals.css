@@ -34,3 +34,7 @@
 @utility tile {
   @apply rounded bg-[#F7F9FC];
 }
+
+@utility accent-text {
+  @apply bg-linear-to-r from-[#A478E8] to-[#516CF7] bg-clip-text text-transparent;
+}

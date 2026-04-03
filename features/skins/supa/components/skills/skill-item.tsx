@@ -69,8 +69,8 @@ export default function SkillItem({
         itemExtraProps={{ level: Math.min(level + 1, 2) as 0 | 1 | 2 }}
         getKey={(skill) => skill.id!}
         className={cn(
-          'SkillsList flex gap-1',
-          isLeafLevel ? 'flex-row flex-wrap' : 'flex-col',
+          'SkillsList flex gap-2',
+          isLeafLevel ? 'flex-row flex-wrap gap-1' : 'flex-col',
         )}
       />
     </div>
