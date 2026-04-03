@@ -3,7 +3,6 @@ import { cn } from '@/shared/lib/utils'
 import { Project } from '@/types/strapi-types'
 import Link from 'next/link'
 import { Link as LinkIcon } from 'lucide-react'
-import { DynamicIcon } from '@/components/shared/dynamic-icon/dunamic-icon'
 import * as LucideIcons from 'lucide-react'
 import { LucideIcon } from 'lucide-react'
 

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { DynamicIcon } from '../shared/dynamic-icon/dunamic-icon'
+import { DynamicIcon } from '../../shared/components/dynamic-icon/dynamic-icon'
 import * as LucideIcons from 'lucide-react'
 import { AtomsFollowItem } from '@/types/strapi-types'
 

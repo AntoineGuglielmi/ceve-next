@@ -1,5 +1,5 @@
 import * as LucideIcons from 'lucide-react'
-import { DynamicIcon } from '../shared/dynamic-icon/dunamic-icon'
+import { DynamicIcon } from '../../shared/components/dynamic-icon/dynamic-icon'
 
 type ContactItemProps = {
   className?: string
