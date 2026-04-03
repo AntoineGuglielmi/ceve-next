@@ -7,10 +7,10 @@ import Infos from '@/features/skins/supa/components/print/infos'
 import Intro from '@/features/skins/supa/components/print/intro'
 import Langages from '@/features/skins/supa/components/print/langages'
 import More from '@/features/skins/supa/components/print/more'
-import Page from '@/features/skins/supa/components/print/page'
 import PageSection from '@/features/skins/supa/components/print/page-section'
 import Skills from '@/features/skins/supa/components/print/skills/skills'
 import Socials from '@/features/skins/supa/components/print/socials'
+import A4 from '@/shared/components/page/a4'
 
 export const revalidate = 3600
 export const dynamic = 'force-dynamic'
@@ -19,7 +19,7 @@ type SupaPrintViewProps = object
 
 export default async function SupaPrintView({}: SupaPrintViewProps) {
   return (
-    <Page>
+    <A4 className="grid grid-cols-base">
       <PageSection className="relative">
         <ColorfulBackground className="inset-0 z-10" />
 
@@ -68,6 +68,6 @@ export default async function SupaPrintView({}: SupaPrintViewProps) {
 
         <Skills />
       </PageSection>
-    </Page>
+    </A4>
   )
 }
