@@ -14,6 +14,9 @@ jobs:
       NODE_ENV: production
       STRAPI_API_BASE_URL: ${{ secrets.STRAPI_API_BASE_URL }}
       STRAPI_API_TOKEN: ${{ secrets.STRAPI_API_TOKEN }}
+      REMOTE_PATTERN_HOSTNAME: ${{ secrets.REMOTE_PATTERN_HOSTNAME }}
+      REMOTE_PATTERN_PORT: ${{ secrets.REMOTE_PATTERN_PORT }}
+      REMOTE_PATTERN_PROTOCOL: ${{ secrets.REMOTE_PATTERN_PROTOCOL }}
 
     steps:
       - name: Checkout repository
