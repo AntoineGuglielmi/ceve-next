@@ -65,6 +65,7 @@ export interface Config {
   publishedAt?: Date | string;
   locale?: string | null;
   gen_cv_code?: string;
+  skin?: Skin | null;
 };
 
 export interface DiplomasSection {
@@ -229,6 +230,17 @@ export interface SkillsSection {
   locale?: string | null;
   title?: string;
   skills?: Skill[] | null;
+};
+
+export interface Skin {
+  id?: number;
+  documentId?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  publishedAt?: Date | string;
+  locale?: string | null;
+  name?: string;
+  code?: string;
 };
 
 export interface SoftSkillsSection {

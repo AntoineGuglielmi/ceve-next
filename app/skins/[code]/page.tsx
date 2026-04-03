@@ -1,9 +1,10 @@
 import GenerateCv from '@/components/generate-cv/generate-cv'
 import Link from 'next/link'
-import { notFound } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 import { Suspense } from 'react'
 import SkinIsLoading from './SkinIsLoading'
 import { checkCode } from '@/shared/lib/checkCode'
+import { ServiceGetConfig } from '@/services/config'
 
 type CodePageProps = {
   params: Promise<{
@@ -20,8 +21,14 @@ export default async function CodePage({ params }: CodePageProps) {
     notFound()
   }
 
-  const skin = process.env.PUBLIC_SKIN
-  const SelectedSkin = await import(`./${skin}/PrintView`).then(
+  // const skin = process.env.PUBLIC_SKIN
+  const { skin } = await ServiceGetConfig()
+  if (!skin) {
+    redirect('/')
+  }
+
+  const { code: skinCode } = skin!
+  const SelectedSkin = await import(`./${skinCode}/PrintView`).then(
     (mod) => mod.default,
   )
 
