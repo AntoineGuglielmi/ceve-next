@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 
   const page = await browser.newPage()
 
-  await page.goto(`http://localhost:3000/supa/${code}`, {
+  await page.goto(`http://localhost:3000/skins/${code}`, {
     waitUntil: 'networkidle0',
   })
 
