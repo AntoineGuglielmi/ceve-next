@@ -1,5 +1,5 @@
-import GoToCv from '@/features/skins/go-to-cv'
 import { ServiceGetConfig } from '@/services/config'
+import PublicDevNav from '@/shared/components/dev-nav/public-dev-nav'
 import { notFound } from 'next/navigation'
 
 type MorePageProps = {
@@ -20,9 +20,11 @@ export default async function MorePage({}: MorePageProps) {
     `./skins/[code]/${skinCode}/PublicView`
   ).then((mod) => mod.default)
   return (
-    <main className="flex @container/main flex-col text-cv-anthracite w-full max-w-240 mx-auto bg-cv-blanc ">
-      {process.env.NODE_ENV === 'development' && <GoToCv />}
-      <SelectedSkin />
-    </main>
+    <>
+      {process.env.NODE_ENV === 'development' && <PublicDevNav />}
+      <main className="flex @container/main flex-col text-cv-anthracite w-full max-w-240 mx-auto">
+        <SelectedSkin />
+      </main>
+    </>
   )
 }

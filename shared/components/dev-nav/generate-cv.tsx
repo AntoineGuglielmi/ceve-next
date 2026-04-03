@@ -1,7 +1,7 @@
 'use client'
 
-import AdminLink from '@/shared/components/admin-link'
 import { SyntheticEvent } from 'react'
+import DevNavLink from './dev-nav-link'
 
 type GenerateCvProps = {
   className?: string
@@ -38,12 +38,12 @@ export default function GenerateCv({
   }
 
   return (
-    <AdminLink
+    <DevNavLink
       href={''}
       onClick={onClick}
       className={`GenerateCv ${className ?? ''}`}
     >
       {children}
-    </AdminLink>
+    </DevNavLink>
   )
 }

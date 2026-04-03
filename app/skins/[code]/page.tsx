@@ -1,10 +1,9 @@
-import GenerateCv from '@/components/generate-cv/generate-cv'
 import { notFound, redirect } from 'next/navigation'
 import { Suspense } from 'react'
 import SkinIsLoading from './SkinIsLoading'
 import { checkCode } from '@/shared/lib/checkCode'
 import { ServiceGetConfig } from '@/services/config'
-import AdminLink from '@/shared/components/admin-link'
+import PrintDevNav from '@/shared/components/dev-nav/print-dev-nav'
 
 type CodePageProps = {
   params: Promise<{
@@ -21,7 +20,6 @@ export default async function CodePage({ params }: CodePageProps) {
     notFound()
   }
 
-  // const skin = process.env.PUBLIC_SKIN
   const { skin } = await ServiceGetConfig()
   if (!skin) {
     redirect('/')
@@ -35,10 +33,7 @@ export default async function CodePage({ params }: CodePageProps) {
   return (
     <>
       <Suspense fallback={<SkinIsLoading />}>
-        <nav className="fixed top-4 left-4 flex flex-col gap-2 print:hidden">
-          <GenerateCv code={code}>Générer le CV</GenerateCv>
-          <AdminLink href="/">Accueil</AdminLink>
-        </nav>
+        <PrintDevNav code={code} />
         <main className="bg-white text-[11px] text-cv-anthracite flex items-center justify-center not-print:py-8">
           <SelectedSkin />
         </main>
