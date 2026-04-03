@@ -1,8 +1,7 @@
-import InfoItem from '@/components/infos/info-item'
-import Title from '@/components/shared/item/title'
 import Section from '@/shared/components/section'
 import { Info } from '@/types/strapi-types'
 import SectionTitle from '../section/section-title'
+import InfoItem from '../../shared/info-item'
 
 type InfosProps = {
   className?: string
@@ -11,7 +10,6 @@ type InfosProps = {
 
 export default function Infos({
   className,
-  children,
   city,
   firstname,
   lastname,

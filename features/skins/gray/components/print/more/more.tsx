@@ -1,7 +1,7 @@
 import { ServiceGetPlusSection } from '@/services/plus'
 import Section from '../section/section'
 import SectionTitle from '../section/section-title'
-import QrCode from './qr-code'
+import QrCode from '@/shared/components/qr-code'
 
 type MoreProps = {
   className?: string

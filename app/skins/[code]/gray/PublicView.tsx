@@ -1,5 +1,5 @@
-import Experiences from '@/features/more/components/experiences/experiences'
-import Header from '@/features/more/components/header/header'
+import Experiences from '@/features/skins/gray/components/public/experiences/experiences'
+import Header from '@/features/skins/gray/components/public/header/header'
 import SectionGroup from '@/shared/components/section-group'
 
 type GrayPublicViewProps = {

@@ -10,7 +10,7 @@ type HeaderProps = {
   children?: React.ReactNode
 }
 
-export default async function Header({ className, children }: HeaderProps) {
+export default async function Header({ className }: HeaderProps) {
   const { email, firstname, lastname, picture, website, city, postalCode } =
     await ServiceGetInfo()
   const { text, title } = await ServiceGetIntro()

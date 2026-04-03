@@ -1,6 +1,5 @@
 import Markdown from '@/shared/components/markdown'
 import { MoleculesJobItem } from '@/types/strapi-types'
-import ReactMarkdown from 'react-markdown'
 
 type JobItemProps = {
   className?: string
@@ -9,11 +8,8 @@ type JobItemProps = {
 
 export default function JobItem({
   className,
-  children,
-  text,
   title,
   description,
-  technos,
 }: JobItemProps) {
   return (
     <div

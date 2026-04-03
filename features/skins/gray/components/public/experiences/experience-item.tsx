@@ -1,7 +1,7 @@
-import InfoItem from '@/components/infos/info-item'
 import List from '@/shared/components/lists/list'
 import { MoleculesExperienceItem } from '@/types/strapi-types'
 import JobItem from './job-item'
+import InfoItem from '../../shared/info-item'
 
 type ExperienceItemProps = {
   className?: string
@@ -10,7 +10,6 @@ type ExperienceItemProps = {
 
 export default function ExperienceItem({
   className,
-  children,
   end,
   geo,
   jobs,

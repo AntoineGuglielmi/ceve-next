@@ -1,8 +1,8 @@
 import List from '@/shared/components/lists/list'
-import Section from '../section/section'
-import SectionTitle from '../section/section-title'
 import { ServiceGetFollowSection } from '@/services/follows'
 import FollowItem from './follow-item'
+import Section from '../section/section'
+import SectionTitle from '../section/section-title'
 
 type FollowsProps = {
   className?: string

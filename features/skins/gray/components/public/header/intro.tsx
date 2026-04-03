@@ -8,12 +8,7 @@ type IntroProps = {
   children?: React.ReactNode
 } & Partial<IntroSection>
 
-export default function Intro({
-  className,
-  children,
-  text,
-  title,
-}: IntroProps) {
+export default function Intro({ className, text, title }: IntroProps) {
   return (
     <Section className={cn('Intro ', className)}>
       <SectionTitle>{title}</SectionTitle>

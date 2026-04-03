@@ -1,6 +1,6 @@
 import { cn } from '@/shared/lib/utils'
-import SectionTitleFromCv from '@/components/section/section-title'
-import { SectionTitleProps as SectionTitlePropsFromCv } from '@/components/section/section-title'
+import SectionTitleFromCv from '@/features/skins/gray/components/print/section/section-title'
+import { SectionTitleProps as SectionTitlePropsFromCv } from '@/features/skins/gray/components/print/section/section-title'
 
 type SectionTitleProps = {
   className?: string

@@ -1,7 +1,7 @@
-import Title from '../shared/item/title'
-import Date from '../shared/item/date'
-import Geo from '../shared/item/geo'
-import Organism from '../shared/item/organism'
+import Date from '@/features/skins/gray/components/print/shared/item/date'
+import Geo from '@/features/skins/gray/components/print/shared/item/geo'
+import Organism from '@/features/skins/gray/components/print/shared/item/organism'
+import Title from '@/features/skins/gray/components/print/shared/item/title'
 import { MoleculesDiplomaItem } from '@/types/strapi-types'
 
 type DiplomaItemProps = {

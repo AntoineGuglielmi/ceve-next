@@ -9,10 +9,7 @@ type ExperiencesProps = {
   children?: React.ReactNode
 }
 
-export default async function Experiences({
-  className,
-  children,
-}: ExperiencesProps) {
+export default async function Experiences({ className }: ExperiencesProps) {
   const { title, list } = await ServiceGetExperiencesSection()
   return (
     <Section className={`Experiences ${className ?? ''}`}>

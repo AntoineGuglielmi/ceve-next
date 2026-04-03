@@ -8,7 +8,7 @@ type AvatarProps = {
 }
 
 export default function Avatar({ className, picture }: AvatarProps) {
-  const { alternativeText, height, width, url } = picture!
+  const { alternativeText, url } = picture!
 
   return (
     <div className={`Avatar relative  overflow-hidden ${className ?? ''}`}>

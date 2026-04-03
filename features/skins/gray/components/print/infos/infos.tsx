@@ -1,6 +1,6 @@
+import InfoItem from '../../shared/info-item'
 import Section from '../section/section'
 import SectionTitle from '../section/section-title'
-import InfoItem from './info-item'
 import { ServiceGetInfo } from '@/services/Info'
 
 type InfosProps = {
